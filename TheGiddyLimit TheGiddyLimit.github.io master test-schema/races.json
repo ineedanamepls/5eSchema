@@ -230,7 +230,8 @@
 					"description": "Homebrew use only.",
 					"oneOf": [
 						{
-							"$ref": "util.json#/definitions/fluffObject"
+							"$ref": "util.json#/definitions/fluffObject",
+							"additionalProperties": false
 						},
 						{
 							"description": "References \"raceFluff\" array items",
