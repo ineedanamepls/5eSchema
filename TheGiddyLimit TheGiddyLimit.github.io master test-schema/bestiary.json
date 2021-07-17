@@ -772,7 +772,8 @@
 										}
 									}
 								}
-							}
+							},
+							"additionalProperties": false
 						}
 					]
 				},
