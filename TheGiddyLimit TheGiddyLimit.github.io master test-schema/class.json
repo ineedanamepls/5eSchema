@@ -274,6 +274,7 @@
 				},
 				"subclassFeatures": {
 					"type": "array",
+					"description": "Format: \"featureName | className | classSource | subclassShortName | subclassSource | level | featureSource\", PHB is assumed for sources, featureSource is assumed to be the same as subclassSource.",
 					"items": {
 						"oneOf": [
 							{
@@ -572,6 +573,7 @@
 				},
 				"classFeatures": {
 					"type": "array",
+					"description": "Format: \" featureName | className | classSource | level | featureSource \" , PHB is assumed as classSource and featureSource is assumed to be the same as classSource.",
 					"items": {
 						"oneOf": [
 							{

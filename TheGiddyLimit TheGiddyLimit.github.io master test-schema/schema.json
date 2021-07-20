@@ -289,6 +289,9 @@
 		"subclass": {
 			"$ref": "class.json#/properties/subclass"
 		},
+		"subclassFeature": {
+			"$ref": "class.json#/properties/subclassFeature"
+		},
 		"spell": {
 			"$ref": "spells.json#/properties/spell"
 		},
