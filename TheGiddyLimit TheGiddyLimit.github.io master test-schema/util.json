@@ -856,6 +856,7 @@
 
 		"size": {
 			"type": "string",
+			"description": "Stands for: Fine, Diminutive, Tiny, Small, Medium, Large, Huge, Gargantuan, Colossal, Varies.",
 			"enum": [
 				"F",
 				"D",
