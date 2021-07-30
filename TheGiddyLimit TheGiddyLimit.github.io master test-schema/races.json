@@ -330,17 +330,26 @@
 			"enum": [
 				"Amphibious",
 				"Blindsight",
+				"Condition Immunity",
+				"Damage Immunity",
+				"Damage Resistance",
+				"Darkvision",
 				"Dragonmark",
+				"Feat",
 				"Improved Resting",
 				"Magic Resistance",
 				"Monstrous Race",
 				"Natural Armor",
 				"NPC Race",
 				"Powerful Build",
+				"Skill Proficiency",
+				"spellcasting",
 				"Sunlight Sensitivity",
+				"Superior Darkvision",
 				"Tool Proficiency",
 				"Unarmed Strike",
-				"Uncommon Race"
+				"Uncommon Race",
+				"Weapon Proficiency"
 			]
 		},
 
