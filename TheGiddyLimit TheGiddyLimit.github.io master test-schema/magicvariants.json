@@ -198,6 +198,10 @@
 							"otherSources": {
 								"$ref": "util.json#/definitions/otherSources"
 							},
+							"value": {
+								"description": "In copper pieces.",
+								"type": ["number", "null"]
+							},
 							"valueMult": {
 								"type": "number"
 							},
