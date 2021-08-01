@@ -31,12 +31,15 @@
 						"Dawn War",
 						"Dragonlance",
 						"Drow",
+						"Duergar",
 						"Dwarven",
 						"Eberron",
 						"Egyptian",
 						"Elven",
+						"Exandria",
 						"Faerûnian",
 						"Forgotten Realms",
+						"Gnome",
 						"Gnomish",
 						"Greek",
 						"Greyhawk",
@@ -44,10 +47,8 @@
 						"Nonhuman",
 						"Norse",
 						"Orc",
-						"Gnome",
-						"Duergar",
-						"Exandria",
-						"Theros"
+						"Theros",
+						"Unknown"
 					]
 				},
 				"category": {
@@ -58,7 +59,22 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"Arcana", "Death", "Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War", "Forge", "Grave", "Order", "Peace", "Twilight"
+							"Arcana",
+							"Death",
+							"Forge",
+							"Grave",
+							"Knowledge",
+							"Life",
+							"Light",
+							"Nature",
+							"None",
+							"Order",
+							"Peace",
+							"Tempest",
+							"Trickery",
+							"Twilight",
+							"Unknown",
+							"War"
 						]
 					}
 				},
@@ -103,7 +119,9 @@
 				"customExtensionOf": {
 					"type": "string"
 				},
-				"piety": {"type": "boolean"}
+				"piety": {
+					"type": "boolean"
+				}
 			},
 			"additionalProperties": false
 		},

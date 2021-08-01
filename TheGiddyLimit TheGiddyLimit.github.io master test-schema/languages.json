@@ -51,6 +51,7 @@
 						}
 					},
 					"fonts": {
+						"description": "A list of direct URLs to font files.",
 						"type": "array",
 						"items": {
 							"type": "string"
