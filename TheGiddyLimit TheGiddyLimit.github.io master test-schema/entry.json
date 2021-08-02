@@ -1044,7 +1044,7 @@
 						"maxWidthUnits": {"type": "string"},
 						"maxHeightUnits": {"type": "string"},
 						"style": {
-							"enum": ["comic-speaker-left", "comic-speaker-right"]
+							"enum": ["comic-speaker-left", "comic-speaker-right", "deity-symbol"]
 						}
 					},
 					"required": ["href"],
