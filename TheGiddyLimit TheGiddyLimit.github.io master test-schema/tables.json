@@ -76,6 +76,13 @@
 							"type": "string"
 						}
 					},
+					"intro": {
+						"description": "Primarily for homebrew use.",
+						"type": "array",
+						"items": {
+							"$ref": "#"
+						}
+					},
 					"rows": {
 						"type": "array",
 						"items": {
@@ -83,6 +90,13 @@
 							"items": {
 								"$ref": "entry.json"
 							}
+						}
+					},
+					"outro": {
+						"description": "Primarily for homebrew use.",
+						"type": "array",
+						"items": {
+							"$ref": "#"
 						}
 					},
 					"footnotes": {
