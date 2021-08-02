@@ -25,58 +25,75 @@
 					"type": "string"
 				},
 				"pantheon": {
-					"type": "string",
-					"enum": [
-						"Celtic",
-						"Dawn War",
-						"Dragonlance",
-						"Drow",
-						"Duergar",
-						"Dwarven",
-						"Eberron",
-						"Egyptian",
-						"Elven",
-						"Exandria",
-						"Faerûnian",
-						"Forgotten Realms",
-						"Gnome",
-						"Gnomish",
-						"Greek",
-						"Greyhawk",
-						"Halfling",
-						"Nonhuman",
-						"Norse",
-						"Orc",
-						"Theros",
-						"Unknown"
+					"oneOf": [
+						{
+							"type": "string",
+							"enum": [
+								"Celtic",
+								"Dawn War",
+								"Dragonlance",
+								"Drow",
+								"Duergar",
+								"Dwarven",
+								"Eberron",
+								"Egyptian",
+								"Elven",
+								"Exandria",
+								"Faerûnian",
+								"Forgotten Realms",
+								"Gnome",
+								"Gnomish",
+								"Greek",
+								"Greyhawk",
+								"Halfling",
+								"Nonhuman",
+								"Norse",
+								"Orc",
+								"Theros",
+								"Unknown"
+							]
+						},
+						{
+							"type": "string"
+						}
 					]
 				},
 				"category": {
 					"type": "string"
 				},
 				"domains": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"enum": [
-							"Arcana",
-							"Death",
-							"Forge",
-							"Grave",
-							"Knowledge",
-							"Life",
-							"Light",
-							"Nature",
-							"None",
-							"Order",
-							"Peace",
-							"Tempest",
-							"Trickery",
-							"Twilight",
-							"Unknown",
-							"War"
-						]
-					}
+					"anyOf": [
+						{
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"Arcana",
+									"Death",
+									"Forge",
+									"Grave",
+									"Knowledge",
+									"Life",
+									"Light",
+									"Nature",
+									"None",
+									"Order",
+									"Peace",
+									"Tempest",
+									"Trickery",
+									"Twilight",
+									"Unknown",
+									"War"
+								]
+							}
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					]
 				},
 				"province": {
 					"description": "The nouveau form of 'title,' first seen in MTF",
