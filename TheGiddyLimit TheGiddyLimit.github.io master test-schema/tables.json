@@ -80,7 +80,7 @@
 						"description": "Primarily for homebrew use.",
 						"type": "array",
 						"items": {
-							"$ref": "#"
+							"$ref": "entry.json"
 						}
 					},
 					"rows": {
@@ -96,7 +96,7 @@
 						"description": "Primarily for homebrew use.",
 						"type": "array",
 						"items": {
-							"$ref": "#"
+							"$ref": "entry.json"
 						}
 					},
 					"footnotes": {
