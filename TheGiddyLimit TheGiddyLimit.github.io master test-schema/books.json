@@ -25,6 +25,7 @@
 						"type": "string"
 					},
 					"coverUrl": {
+						"description": "A direct link to an image which should be 300 x 300px in size. Larger images will be centered and cropped.",
 						"type": "string"
 					},
 					"contents": {
