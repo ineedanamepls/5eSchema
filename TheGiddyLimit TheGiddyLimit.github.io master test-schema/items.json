@@ -437,10 +437,8 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"},
 				"hasRefs": {"type": "boolean"}
-			},
-			"additionalProperties": false
+			}
 		},
-
 		"item": {
 			"anyOf": [
 				{

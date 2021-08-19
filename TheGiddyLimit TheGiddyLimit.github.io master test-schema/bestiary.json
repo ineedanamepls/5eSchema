@@ -942,8 +942,7 @@
 				},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
-			},
-			"additionalProperties": false
+			}
 		},
 
 		"creature": {
