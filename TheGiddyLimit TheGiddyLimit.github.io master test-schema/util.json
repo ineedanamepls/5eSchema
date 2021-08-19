@@ -1233,8 +1233,7 @@
 						"$ref": "entry.json"
 					}
 				}
-			},
-			"additionalProperties": false
+			}
 		},
 
 		"genericFluffArray": {
@@ -1534,8 +1533,7 @@
 							}
 						}
 					},
-					"required": ["name", "source"],
-					"additionalProperties": false
+					"required": ["name", "source"]
 				}
 			},
 			"required": [

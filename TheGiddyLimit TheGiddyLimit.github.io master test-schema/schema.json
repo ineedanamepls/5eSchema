@@ -426,6 +426,12 @@
 		},
 		"monster": {
 			"$ref": "bestiary.json#/properties/monster"
+		},
+		"itemFluff": {
+			"$ref": "fluff-items.json#/properties/itemFluff"
+		},
+		"monsterFluff": {
+			"$ref": "fluff-bestiary.json#/properties/monsterFluff"
 		}
 	}
 }
