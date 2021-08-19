@@ -426,9 +426,6 @@
 		},
 		"monster": {
 			"$ref": "bestiary.json#/properties/monster"
-		},
-		"monsterFluff": {
-			"$ref": "fluff-bestiary.json#/properties/monsterFluff"
 		}
 	}
 }
