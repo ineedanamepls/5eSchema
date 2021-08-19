@@ -59,6 +59,15 @@
 							"items": {
 								"$ref": "#/definitions/featureType"
 							}
+						},
+						{
+							"type":"string"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type":"string"
+							}
 						}
 					]
 				},
