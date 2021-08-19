@@ -1,3 +1,29 @@
+Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeature`:
+```
+{
+...
+    "featureType": [
+        "PB",
+        "IWM:W",
+        "hello"			
+    ],
+...
+}
+```
+instead of: 
+```
+{
+...
+    "featureType": [
+        "PB",
+        "hello",
+        "IWM:W"
+    ],
+...
+}
+```
+Here the schema provides a list of official feature types that you can choose from, which will disappear once you write down a homebrew feature type.
+
 # 5eSchema for Editors
 Just modified the actual 5e.tools Schema to one that can be used in your Editor.
 
