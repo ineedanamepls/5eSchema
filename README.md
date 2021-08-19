@@ -1,26 +1,31 @@
-Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeature`:
+Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeatures`:
 ```
-{
-...
-    "featureType": [
-        "PB",
-        "IWM:W",
-        "hello"			
-    ],
-...
-}
+"optionalfeature": [
+    {
+        ...
+            "featureType": [
+                "PB",
+                "IWM:W",
+                "hello"			
+            ],
+        ...
+    }
+]
+
 ```
 instead of: 
 ```
-{
-...
-    "featureType": [
-        "PB",
-        "hello",
-        "IWM:W"
-    ],
-...
-}
+"optionalfeature": [
+    {
+        ...
+            "featureType": [
+                "PB",
+                "hello",
+                "IWM:W"		
+            ],
+        ...
+    }
+]
 ```
 Here the schema provides a list of official feature types that you can choose from, which will disappear once you write down a homebrew feature type.
 
