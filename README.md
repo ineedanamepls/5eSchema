@@ -1,4 +1,4 @@
-Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeatures`:
+Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeature`:
 ```
 "optionalfeature": [
     {
