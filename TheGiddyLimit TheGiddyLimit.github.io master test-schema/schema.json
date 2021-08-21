@@ -274,14 +274,8 @@
 		"adventure": {
 			"$ref": "adventures.json#/properties/adventure"
 		},
-		"adventureData": {
-			"type": "array"
-		},
 		"book": {
 			"$ref": "books.json#/properties/book"
-		},
-		"bookData": {
-			"type": "array"
 		},
 		"class": {
 			"$ref": "class.json#/properties/class"
@@ -432,6 +426,12 @@
 		},
 		"monsterFluff": {
 			"$ref": "fluff-bestiary.json#/properties/monsterFluff"
+		},
+		"bookData": {
+			"$ref": "bookData.json#/properties/bookData"
+		},
+		"adventureData": {
+			"$ref": "adventureData.json#/properties/adventureData"
 		}
 	}
 }
