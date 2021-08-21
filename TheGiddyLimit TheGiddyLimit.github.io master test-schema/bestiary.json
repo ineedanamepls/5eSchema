@@ -961,13 +961,7 @@
 								"ac",
 								"hp",
 								"speed",
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha",
-								"passive"
+								"str"
 							]
 						}
 					]
