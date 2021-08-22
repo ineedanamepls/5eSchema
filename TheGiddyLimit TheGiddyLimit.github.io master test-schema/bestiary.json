@@ -254,22 +254,64 @@
 					"$ref": "util.json#/definitions/speed"
 				},
 				"str": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"dex": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"con": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"int": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"wis": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"cha": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type":"null"
+						}
+					]
 				},
 				"save": {
 					"type": "object",
