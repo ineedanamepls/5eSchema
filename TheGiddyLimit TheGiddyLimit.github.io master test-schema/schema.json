@@ -433,5 +433,6 @@
 		"adventureData": {
 			"$ref": "adventureData.json#/properties/adventureData"
 		}
-	}
+	},
+	"additionalProperties": false
 }
