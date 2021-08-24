@@ -151,6 +151,7 @@
 								},
 								"swarmSize": {
 									"type": "string",
+									"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
 									"enum": [
 										"F",
 										"D",
@@ -903,17 +904,17 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"underwater",
+							"arctic",
 							"coastal",
-							"mountain",
+							"desert",
+							"forest",
 							"grassland",
 							"hill",
-							"arctic",
-							"urban",
-							"forest",
+							"mountain",
 							"swamp",
 							"underdark",
-							"desert"
+							"underwater",
+							"urban"
 						]
 					}
 				},
@@ -922,17 +923,18 @@
 				},
 				"dragonCastingColor": {
 					"type": "string",
+					"description": "B: Black\n U: Blue\n A: Brass\n Z: Bronze\n C: Copper\n O: Gold\n G: Green\n R: Red\n S: Silver\n W: White",
 					"enum": [
-						"B",
-						"U",
-						"G",
-						"R",
-						"W",
 						"A",
-						"Z",
+						"B",
 						"C",
+						"G",
 						"O",
-						"S"
+						"R",
+						"S",
+						"U",
+						"W",
+						"Z"
 					]
 				},
 				"traitTags": {
@@ -1000,8 +1002,10 @@
 				},
 				"languageTags": {
 					"type": "array",
+					"description": "",
 					"items": {
 						"type": "string",
+						"description": "AB: Abyssal\n AQ: Aquan\n AU: Auran\n C: Common\n CE: Celestial\n CS: Can't Speak Known Languages\n D: Dwarvish\n DR: Draconic\n DS: Deep Speech\n DU: Druidic\n E: Elvish\n G: Gnomish\n GI: Giant\n GO: Goblin\n GTH: Gith\n H: Halfling\n I: Infernal\n IG: Ignan\n LF: Languages Known in Life\n O: Orc\n OTH: Other\n P: Primordial\n S: Sylvan\n T: Terran\n TC: Thieves' cant\n TP: Telepathy\n U: Undercommon\n X: Any (Choose)\n XX: All",
 						"enum": [
 							"AB",
 							"AQ",
@@ -1039,6 +1043,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
+						"description": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight",
 						"enum": [
 							"B",
 							"D",
@@ -1052,6 +1057,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
+						"description": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard",
 						"enum": [
 							"P",
 							"I",
@@ -1073,6 +1079,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
+						"description": "A: Acid\n B: Bludgeoning\n C: Cold\n F: Fire\n O: Force\n L: Lightning\n N: Necrotic\n P: Piercing\n I: Poison\n Y: Psychic\n R: Radiant\n S: Slashing\n T: Thunder",
 						"enum": [
 							"A",
 							"B",
@@ -1094,13 +1101,14 @@
 					"type": "array",
 					"items": {
 						"type": "string",
+						"description": "AOE: Has Areas of Effect\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
 						"enum": [
+							"AOE",
 							"MW",
 							"RW",
 							"RCH",
-							"THW",
 							"RNG",
-							"AOE"
+							"THW"
 						]
 					}
 				},
