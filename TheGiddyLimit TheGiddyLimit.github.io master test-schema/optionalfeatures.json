@@ -50,24 +50,32 @@
 					"type": "integer"
 				},
 				"featureType": {
-					"oneOf": [
+					"anyOf": [
 						{
-							"$ref": "#/definitions/featureType"
+							"oneOf": [
+								{
+									"$ref": "#/definitions/featureType"
+								},
+								{
+									"type":"string"
+								}
+							]
 						},
 						{
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/featureType"
-							}
-						},
-						{
-							"type":"string"
-						},
-						{
-							"type": "array",
-							"items": {
-								"type":"string"
-							}
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/featureType"
+									}
+								},
+								{
+									"type": "array",
+									"items": {
+										"type":"string"
+									}
+								}
+							]
 						}
 					]
 				},
