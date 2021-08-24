@@ -43,7 +43,7 @@ Just modified the actual 5e.tools Schema to one that can be used in your Editor.
     "fileMatch": [
         "*.json"
     ],
-    "url": "./5etools Homebrew Schema/schema.json"
+    "url": "./5etools-Homebrew-Schema/schema.json"
 }
 ```
 Every json file you make in this workplace folder now will use this schema.  
