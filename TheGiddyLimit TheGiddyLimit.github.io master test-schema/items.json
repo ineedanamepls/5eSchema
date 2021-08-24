@@ -84,8 +84,15 @@
 				"property": {
 					"type": "array",
 					"items": {
-						"type": "string",
-						"enum": ["T", "V", "H", "2H", "F", "L", "R", "A", "LD", "S", "AF", "RLD", "BF", "EM", "OTH"]
+						"anyOf": [
+							{
+								"type": "string",
+								"enum": ["T", "V", "H", "2H", "F", "L", "R", "A", "LD", "S", "AF", "RLD", "BF", "EM", "OTH"]
+							},
+							{
+								"type": "string"
+							}
+						]					
 					}
 				},
 				"range": {
