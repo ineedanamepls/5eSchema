@@ -308,6 +308,50 @@
 						"additionalProperties": false
 					}
 				},
+				"trait": {
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "entry.json"
+										}
+									},
+									"type": {
+										"type": "string",
+										"enum": ["entries", "inset"]
+									},
+									"sort": {
+										"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
+										"type": "integer"
+									}
+								},
+								"required": [
+									"name",
+									"entries"
+								],
+								"additionalProperties": false
+							}
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"fluff": {
+					"$ref": "util.json#/definitions/fluffObject",
+					"additionalProperties": false
+				},
+				"tokenUrl": {
+					"type": "string"
+				},
 				"hasToken": {
 					"type": "boolean"
 				},
