@@ -15,16 +15,16 @@
 				},
 				"rarity": {
 					"type": "string",
-					"description": "\"None\" is for mundane items. \"Unknown (Magic)\" is for miscellaneous magical items. \"Unknown\" is for miscellaneous mundane items. \"Varies\" is for item groups.",
+					"description": "\"None\" is for mundane items. \"Unknown\" is for miscellaneous mundane items.  \"Unknown (Magic)\" is for miscellaneous magical items. \"Varies\" is for item groups.",
 					"enum": [
-						"rare",
 						"none",
+						"unknown",
+						"common",
 						"uncommon",
+						"rare",
 						"very rare",
 						"legendary",
 						"artifact",
-						"unknown",
-						"common",
 						"unknown (magic)",
 						"varies"
 					]
@@ -83,16 +83,33 @@
 				},
 				"property": {
 					"type": "array",
+					"description": "2H: Two-Handed\n A: Ammunition\n AF: Ammunition (futuristic)\n BF: Burst Fire\n EM: Eldritch Machine\n F: Finesse\n H: Heavy\n L: Light\n LD: Loading\n OTH: Other\n R: Reach\n RLD: Reload\n S: Special\n T: Thrown\n V: Versatile",
 					"items": {
 						"anyOf": [
 							{
 								"type": "string",
-								"enum": ["T", "V", "H", "2H", "F", "L", "R", "A", "LD", "S", "AF", "RLD", "BF", "EM", "OTH"]
+								"enum": [
+									"2H",
+									"A",
+									"AF",
+									"BF",
+									"EM",
+									"F",
+									"H",
+									"L",
+									"LD",
+									"OTH",
+									"R",
+									"RLD",
+									"S",
+									"T",
+									"V"
+								]
 							},
 							{
 								"type": "string"
 							}
-						]					
+						]
 					}
 				},
 				"range": {
@@ -150,11 +167,17 @@
 					"type": "boolean"
 				},
 				"strength": {
-					"type": ["string", "null"]
+					"type": [
+						"string",
+						"null"
+					]
 				},
 				"dexterityMax": {
 					"description": "Maximum dexterity modifier for medium armor.",
-					"type": ["integer", "null"]
+					"type": [
+						"integer",
+						"null"
+					]
 				},
 				"sword": {
 					"type": "boolean"
@@ -171,7 +194,10 @@
 				},
 				"value": {
 					"description": "In copper pieces.",
-					"type": ["number", "null"]
+					"type": [
+						"number",
+						"null"
+					]
 				},
 				"currencyConversion": {
 					"description": "ID of a value conversion table. Homebrew only.",
@@ -211,7 +237,12 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["ingested", "injury", "inhaled", "contact"]
+						"enum": [
+							"contact",
+							"ingested",
+							"injury",
+							"inhaled"
+						]
 					}
 				},
 				"crew": {
@@ -252,10 +283,21 @@
 					"type": "integer"
 				},
 				"charges": {
-					"type": ["string", "integer"]
+					"type": [
+						"string",
+						"integer"
+					]
 				},
 				"recharge": {
-					"enum": ["round", "restShort", "restLong", "dawn", "dusk", "midnight", "special"]
+					"enum": [
+						"dawn",
+						"dusk",
+						"midnight",
+						"round",
+						"restShort",
+						"restLong",
+						"special"
+					]
 				},
 				"attachedSpells": {
 					"type": "array",
@@ -280,19 +322,19 @@
 						"static": {
 							"type": "object"
 						},
-						"str":  {
+						"str": {
 							"type": "integer"
 						},
 						"dex": {
 							"type": "integer"
 						},
-						"con":  {
+						"con": {
 							"type": "integer"
 						},
 						"int": {
 							"type": "integer"
 						},
-						"wis":  {
+						"wis": {
 							"type": "integer"
 						},
 						"cha": {
@@ -310,7 +352,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": ["Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"]
+								"enum": [
+									"Bard",
+									"Cleric",
+									"Druid",
+									"Paladin",
+									"Ranger",
+									"Sorcerer",
+									"Warlock",
+									"Wizard"
+								]
 							}
 						}
 					]
@@ -379,7 +430,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["special"]
+								"required": [
+									"special"
+								]
 							},
 							{
 								"type": "object",
@@ -392,7 +445,10 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["item", "quantity"]
+								"required": [
+									"item",
+									"quantity"
+								]
 							}
 						]
 					}
@@ -441,9 +497,15 @@
 				"reqAttuneAltTags": {
 					"$ref": "util.json#/definitions/reqAttuneTags"
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"},
-				"hasRefs": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"hasRefs": {
+					"type": "boolean"
+				}
 			}
 		},
 		"item": {

@@ -3,7 +3,6 @@
 	"$id": "backgrounds.json",
 	"version": "1.2.1",
 	"type": "object",
-
 	"definitions": {
 		"backgroundData": {
 			"type": "object",
@@ -44,11 +43,14 @@
 				"startingEquipment": {
 					"$ref": "util.json#/definitions/startingEquipment"
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
 			}
 		},
-
 		"background": {
 			"anyOf": [
 				{
@@ -79,7 +81,6 @@
 			]
 		}
 	},
-
 	"properties": {
 		"background": {
 			"type": "array",

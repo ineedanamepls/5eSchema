@@ -1,11 +1,10 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "adventureData.json",
 	"version": "1.0.0",
 	"type": "object",
-
-    "definitions": {
-        "adventureData": {
+	"definitions": {
+		"adventureData": {
 			"type": "object",
 			"properties": {
 				"id": {
@@ -15,19 +14,18 @@
 					"type": "string"
 				},
 				"data": {
-					"type":"array"
+					"type": "array"
 				}
 			},
 			"additionalProperties": false
 		}
-    },
-
-    "properties": {
-        "adventureData": {
-			"type":"array",
+	},
+	"properties": {
+		"adventureData": {
+			"type": "array",
 			"items": {
 				"$ref": "#/definitions/adventureData"
-			}	
+			}
 		}
-    }
+	}
 }

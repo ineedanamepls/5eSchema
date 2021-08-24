@@ -94,15 +94,16 @@
 							},
 							"rarity": {
 								"type": "string",
+								"description": "\"None\" is for mundane items. \"Unknown\" is for miscellaneous mundane items. \"Unknown (Magic)\" is for miscellaneous magical items. \"Varies\" is for item groups.",
 								"enum": [
-									"rare",
 									"none",
+									"unknown",
+									"common",
 									"uncommon",
+									"rare",
 									"very rare",
 									"legendary",
 									"artifact",
-									"unknown",
-									"common",
 									"unknown (magic)",
 									"varies"
 								]
@@ -151,7 +152,10 @@
 								"type": "boolean"
 							},
 							"strength": {
-								"type": ["string", "null"]
+								"type": [
+									"string",
+									"null"
+								]
 							},
 							"wondrous": {
 								"type": "boolean"
@@ -163,7 +167,10 @@
 								}
 							},
 							"charges": {
-								"type": ["string", "integer"]
+								"type": [
+									"string",
+									"integer"
+								]
 							},
 							"attachedSpells": {
 								"type": "array",
@@ -221,7 +228,9 @@
 							"reqAttuneAltTags": {
 								"$ref": "util.json#/definitions/reqAttuneTags"
 							},
-							"hasRefs": {"type": "boolean"}
+							"hasRefs": {
+								"type": "boolean"
+							}
 						},
 						"required": [
 							"rarity",
@@ -262,7 +271,10 @@
 						"type": "boolean"
 					},
 					"charges": {
-						"type": ["string", "integer"]
+						"type": [
+							"string",
+							"integer"
+						]
 					},
 					"attachedSpells": {
 						"type": "array",
@@ -279,8 +291,12 @@
 					"reqAttuneAltTags": {
 						"$ref": "util.json#/definitions/reqAttuneTags"
 					},
-					"hasFluff": {"type": "boolean"},
-					"hasFluffImages": {"type": "boolean"}
+					"hasFluff": {
+						"type": "boolean"
+					},
+					"hasFluffImages": {
+						"type": "boolean"
+					}
 				},
 				"required": [
 					"name",

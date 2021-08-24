@@ -3,7 +3,6 @@
 	"$id": "deities.json",
 	"version": "1.1.4",
 	"type": "object",
-
 	"definitions": {
 		"deityData": {
 			"type": "object",
@@ -16,9 +15,16 @@
 				},
 				"alignment": {
 					"type": "array",
+					"description": "L: Lawful\n N: Neutral\n C: Chaotic\n G: Good\n E: Evil",
 					"items": {
 						"type": "string",
-						"enum": ["C", "N", "G", "L", "E"]
+						"enum": [
+							"L",
+							"N",
+							"C",
+							"G",
+							"E"
+						]
 					}
 				},
 				"title": {
@@ -142,7 +148,6 @@
 			},
 			"additionalProperties": false
 		},
-
 		"deity": {
 			"anyOf": [
 				{
@@ -172,7 +177,6 @@
 			]
 		}
 	},
-
 	"properties": {
 		"deity": {
 			"type": "array",

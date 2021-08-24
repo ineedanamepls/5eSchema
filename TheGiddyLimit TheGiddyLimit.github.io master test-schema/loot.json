@@ -133,15 +133,15 @@
 								}
 							},
 							"fromGeneric": {
-								"type":  "array",
+								"type": "array",
 								"items": {
-									"type":  "string"
+									"type": "string"
 								}
 							},
 							"fromItems": {
-								"type":  "array",
+								"type": "array",
 								"items": {
-									"type":  "string"
+									"type": "string"
 								}
 							}
 						},

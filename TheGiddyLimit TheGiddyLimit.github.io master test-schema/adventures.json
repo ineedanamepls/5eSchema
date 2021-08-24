@@ -19,7 +19,7 @@
 						"type": "string"
 					},
 					"alAveragePlayerLevel": {
-						"description": "Adventurers League APL; for use in homebrew.",
+						"description": "Adventurers League Average Player Level; for use in homebrew.",
 						"type": "integer"
 					},
 					"alLength": {
@@ -28,13 +28,19 @@
 						"oneOf": [
 							{
 								"properties": {
-									"min": {"type": "integer"},
-									"max": {"type": "integer"}
+									"min": {
+										"type": "integer"
+									},
+									"max": {
+										"type": "integer"
+									}
 								}
 							},
 							{
 								"properties": {
-									"exact": {"type": "integer"}
+									"exact": {
+										"type": "integer"
+									}
 								}
 							}
 						]
@@ -84,10 +90,19 @@
 									"properties": {
 										"type": {
 											"type": "string",
-											"enum": ["chapter", "appendix", "part", "episode", "level"]
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level"
+											]
 										},
 										"identifier": {
-											"type": ["integer", "string"]
+											"type": [
+												"integer",
+												"string"
+											]
 										}
 									},
 									"additionalProperties": false,
@@ -152,34 +167,34 @@
 							{
 								"type": "string",
 								"enum": [
-									"Starter Set",
-									"Tyranny of Dragons",
+									"Acquisitions Incorporated",
+									"Baldur's Gate",
+									"Candlekeep Mysteries",
+									"Eberron",
 									"Elemental Evil",
-									"Rage of Demons",
-									"Ravenloft",
-									"Storm King's Thunder",
-									"Tales from the Yawning Portal",
-									"Tomb of Annihilation",
-									"Waterdeep",
-									"Ravnica",
+									"Essentials Kit",
 									"Extra Life",
 									"Ghosts of Saltmarsh",
-									"Acquisitions Incorporated",
-									"Essentials Kit",
-									"Stranger Things",
-									"Baldur's Gate",
-									"Eberron",
-									"Rick and Morty",
-									"Wildemount",
 									"Icewind Dale",
 									"Mythic Odysseys of Theros",
-									"Candlekeep Mysteries"
-								]	
+									"Rage of Demons",
+									"Ravenloft",
+									"Ravnica",
+									"Rick and Morty",
+									"Starter Set",
+									"Storm King's Thunder",
+									"Stranger Things",
+									"Tales from the Yawning Portal",
+									"Tomb of Annihilation",
+									"Tyranny of Dragons",
+									"Waterdeep",
+									"Wildemount"
+								]
 							},
 							{
 								"type": "string"
 							}
-						]			
+						]
 					}
 				},
 				"additionalProperties": false,

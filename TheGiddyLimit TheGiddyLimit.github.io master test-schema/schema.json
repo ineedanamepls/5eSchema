@@ -3,7 +3,6 @@
 	"version": "1.6.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
-
 	"properties": {
 		"_meta": {
 			"description": "Metadata for the included data arrays",
@@ -319,20 +318,20 @@
 								"description": "From Foundry's `CONFIG.DND5E.targetTypes`",
 								"type": "string",
 								"enum": [
-									"none",
-									"self",
-									"creature",
 									"ally",
-									"enemy",
-									"object",
-									"space",
-									"radius",
-									"sphere",
+									"creature",
 									"cylinder",
 									"cone",
-									"square",
 									"cube",
+									"enemy",
 									"line",
+									"none",
+									"object",
+									"radius",
+									"self",
+									"space",
+									"sphere",
+									"square",
 									"wall"
 								]
 							}

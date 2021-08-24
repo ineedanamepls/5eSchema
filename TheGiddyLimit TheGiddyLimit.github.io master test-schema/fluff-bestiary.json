@@ -3,7 +3,6 @@
 	"$id": "fluff-bestiary.json",
 	"version": "2.0.0",
 	"type": "object",
-
 	"properties": {
 		"monsterFluff": {
 			"$ref": "util.json#/definitions/genericFluffArray"

@@ -1,12 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "util.json",
-
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
 	"version": "1.4.3",
-
-	"definitions" : {
+	"definitions": {
 		"metaBlock": {
 			"type": "object",
 			"properties": {
@@ -15,7 +13,9 @@
 					"properties": {
 						"monster": {
 							"type": "array",
-							"items": {"type": "string"}
+							"items": {
+								"type": "string"
+							}
 						}
 					}
 				},
@@ -30,7 +30,6 @@
 				}
 			}
 		},
-
 		"otherSources": {
 			"type": "array",
 			"items": {
@@ -49,7 +48,6 @@
 				"additionalProperties": false
 			}
 		},
-
 		"additionalSources": {
 			"type": "array",
 			"items": {
@@ -68,7 +66,6 @@
 				"additionalProperties": false
 			}
 		},
-
 		"languageNameLower": {
 			"type": "string",
 			"enum": [
@@ -97,7 +94,6 @@
 				"undercommon"
 			]
 		},
-
 		"languageProficiencies": {
 			"type": "array",
 			"items": {
@@ -162,45 +158,98 @@
 				}
 			}
 		},
-
 		"toolProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"artisan's tools": {"type": "boolean"},
-
-					"alchemist's supplies": {"type": "boolean"},
-					"brewer's supplies":{"type": "boolean"},
-					"calligrapher's supplies": {"type": "boolean"},
-					"carpenter's tools":{"type": "boolean"},
-					"cartographer's tools": {"type": "boolean"},
-					"cobbler's tools":{"type": "boolean"},
-					"cook's utensils": {"type": "boolean"},
-					"glassblower's tools":{"type": "boolean"},
-					"jeweler's tools": {"type": "boolean"},
-					"leatherworker's tools":{"type": "boolean"},
-					"mason's tools": {"type": "boolean"},
-					"painter's supplies":{"type": "boolean"},
-					"potter's tools": {"type": "boolean"},
-					"smith's tools":{"type": "boolean"},
-					"tinker's tools": {"type": "boolean"},
-					"weaver's tools":{"type": "boolean"},
-					"woodcarver's tools": {"type": "boolean"},
-
-					"disguise kit": {"type": "boolean"},
-					"forgery kit": {"type": "boolean"},
-					"gaming set": {"type": "boolean"},
-					"herbalism kit": {"type": "boolean"},
-					"musical instrument": {"type": "boolean"},
-					"navigator's tools": {"type": "boolean"},
-					"thieves' tools": {"type": "boolean"},
-					"vehicles (land)": {"type": "boolean"},
-					"vehicles (water)": {"type": "boolean"},
-					"poisoner's kit": {"type": "boolean"},
-
-					"any": {"type": "integer"},
-
+					"artisan's tools": {
+						"type": "boolean"
+					},
+					"alchemist's supplies": {
+						"type": "boolean"
+					},
+					"brewer's supplies": {
+						"type": "boolean"
+					},
+					"calligrapher's supplies": {
+						"type": "boolean"
+					},
+					"carpenter's tools": {
+						"type": "boolean"
+					},
+					"cartographer's tools": {
+						"type": "boolean"
+					},
+					"cobbler's tools": {
+						"type": "boolean"
+					},
+					"cook's utensils": {
+						"type": "boolean"
+					},
+					"glassblower's tools": {
+						"type": "boolean"
+					},
+					"jeweler's tools": {
+						"type": "boolean"
+					},
+					"leatherworker's tools": {
+						"type": "boolean"
+					},
+					"mason's tools": {
+						"type": "boolean"
+					},
+					"painter's supplies": {
+						"type": "boolean"
+					},
+					"potter's tools": {
+						"type": "boolean"
+					},
+					"smith's tools": {
+						"type": "boolean"
+					},
+					"tinker's tools": {
+						"type": "boolean"
+					},
+					"weaver's tools": {
+						"type": "boolean"
+					},
+					"woodcarver's tools": {
+						"type": "boolean"
+					},
+					"disguise kit": {
+						"type": "boolean"
+					},
+					"forgery kit": {
+						"type": "boolean"
+					},
+					"gaming set": {
+						"type": "boolean"
+					},
+					"herbalism kit": {
+						"type": "boolean"
+					},
+					"musical instrument": {
+						"type": "boolean"
+					},
+					"navigator's tools": {
+						"type": "boolean"
+					},
+					"thieves' tools": {
+						"type": "boolean"
+					},
+					"vehicles (land)": {
+						"type": "boolean"
+					},
+					"vehicles (water)": {
+						"type": "boolean"
+					},
+					"poisoner's kit": {
+						"type": "boolean"
+					},
+					"any": {
+						"type": "integer"
+					},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -209,7 +258,6 @@
 								"items": {
 									"enum": [
 										"artisan's tools",
-
 										"alchemist's supplies",
 										"brewer's supplies",
 										"calligrapher's supplies",
@@ -217,26 +265,25 @@
 										"cartographer's tools",
 										"cobbler's tools",
 										"cook's utensils",
+										"disguise kit",
+										"forgery kit",
 										"glassblower's tools",
+										"gaming set",
+										"herbalism kit",
 										"jeweler's tools",
 										"leatherworker's tools",
 										"mason's tools",
+										"musical instrument",
+										"navigator's tools",
 										"painter's supplies",
 										"potter's tools",
 										"smith's tools",
 										"tinker's tools",
-										"weaver's tools",
-										"woodcarver's tools",
-
-										"disguise kit",
-										"forgery kit",
-										"gaming set",
-										"herbalism kit",
-										"musical instrument",
-										"navigator's tools",
 										"thieves' tools",
 										"vehicles (land)",
-										"vehicles (water)"
+										"vehicles (water)",
+										"weaver's tools",
+										"woodcarver's tools"
 									]
 								}
 							},
@@ -248,57 +295,91 @@
 				}
 			}
 		},
-
 		"skillNameLower": {
 			"type": "string",
 			"enum": [
 				"athletics",
 				"acrobatics",
-				"sleight of hand",
-				"stealth",
 				"arcana",
+				"animal handling",
+				"deception",
 				"history",
 				"investigation",
-				"nature",
-				"religion",
-				"animal handling",
 				"insight",
-				"medicine",
-				"perception",
-				"survival",
-				"deception",
 				"intimidation",
+				"medicine",
+				"nature",
+				"perception",
 				"performance",
-				"persuasion"
+				"persuasion",
+				"religion",
+				"sleight of hand",
+				"stealth",
+				"survival"
 			]
 		},
-
 		"skillProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"athletics": {"type": "boolean"},
-					"acrobatics":{"type": "boolean"},
-					"sleight of hand": {"type": "boolean"},
-					"stealth":{"type": "boolean"},
-					"arcana": {"type": "boolean"},
-					"history":{"type": "boolean"},
-					"investigation": {"type": "boolean"},
-					"nature":{"type": "boolean"},
-					"religion": {"type": "boolean"},
-					"animal handling":{"type": "boolean"},
-					"insight": {"type": "boolean"},
-					"medicine":{"type": "boolean"},
-					"perception": {"type": "boolean"},
-					"survival":{"type": "boolean"},
-					"deception": {"type": "boolean"},
-					"intimidation":{"type": "boolean"},
-					"performance": {"type": "boolean"},
-					"persuasion":{"type": "boolean"},
-
-					"tool": {"type": "boolean"},
-
+					"athletics": {
+						"type": "boolean"
+					},
+					"acrobatics": {
+						"type": "boolean"
+					},
+					"sleight of hand": {
+						"type": "boolean"
+					},
+					"stealth": {
+						"type": "boolean"
+					},
+					"arcana": {
+						"type": "boolean"
+					},
+					"history": {
+						"type": "boolean"
+					},
+					"investigation": {
+						"type": "boolean"
+					},
+					"nature": {
+						"type": "boolean"
+					},
+					"religion": {
+						"type": "boolean"
+					},
+					"animal handling": {
+						"type": "boolean"
+					},
+					"insight": {
+						"type": "boolean"
+					},
+					"medicine": {
+						"type": "boolean"
+					},
+					"perception": {
+						"type": "boolean"
+					},
+					"survival": {
+						"type": "boolean"
+					},
+					"deception": {
+						"type": "boolean"
+					},
+					"intimidation": {
+						"type": "boolean"
+					},
+					"performance": {
+						"type": "boolean"
+					},
+					"persuasion": {
+						"type": "boolean"
+					},
+					"tool": {
+						"type": "boolean"
+					},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -332,62 +413,142 @@
 								}
 							}
 						}
-
 					}
 				},
 				"additionalProperties": false
 			}
 		},
-
 		"weaponProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"simple": {"type": "boolean"},
-					"martial": {"type": "boolean"},
-					"firearms": {"type": "boolean"},
-
-					"battleaxe|phb": {"type": "boolean"},
-					"club|phb": {"type": "boolean"},
-					"dagger|phb":  {"type": "boolean"},
-					"flail|phb": {"type": "boolean"},
-					"glaive|phb":  {"type": "boolean"},
-					"greataxe|phb": {"type": "boolean"},
-					"greatclub|phb":  {"type": "boolean"},
-					"greatsword|phb": {"type": "boolean"},
-					"halberd|phb":  {"type": "boolean"},
-					"handaxe|phb": {"type": "boolean"},
-					"javelin|phb":  {"type": "boolean"},
-					"lance|phb": {"type": "boolean"},
-					"light hammer|phb":  {"type": "boolean"},
-					"longsword|phb": {"type": "boolean"},
-					"mace|phb":  {"type": "boolean"},
-					"maul|phb": {"type": "boolean"},
-					"morningstar|phb":  {"type": "boolean"},
-					"pike|phb": {"type": "boolean"},
-					"quarterstaff|phb":  {"type": "boolean"},
-					"rapier|phb": {"type": "boolean"},
-					"scimitar|phb":  {"type": "boolean"},
-					"shortsword|phb": {"type": "boolean"},
-					"sickle|phb":  {"type": "boolean"},
-					"spear|phb": {"type": "boolean"},
-					"staff|phb":  {"type": "boolean"},
-					"trident|phb": {"type": "boolean"},
-					"war pick|phb":  {"type": "boolean"},
-					"warhammer|phb": {"type": "boolean"},
-					"whip|phb":  {"type": "boolean"},
-					"blowgun|phb": {"type": "boolean"},
-					"dart|phb":  {"type": "boolean"},
-					"hand crossbow|phb": {"type": "boolean"},
-					"heavy crossbow|phb":  {"type": "boolean"},
-					"light crossbow|phb": {"type": "boolean"},
-					"longbow|phb":  {"type": "boolean"},
-					"net|phb": {"type": "boolean"},
-					"shortbow|phb":  {"type": "boolean"},
-					"sling|phb": {"type": "boolean"},
-					"double-bladed scimitar|erlw":  {"type": "boolean"},
-
+					"simple": {
+						"type": "boolean"
+					},
+					"martial": {
+						"type": "boolean"
+					},
+					"firearms": {
+						"type": "boolean"
+					},
+					"battleaxe|phb": {
+						"type": "boolean"
+					},
+					"club|phb": {
+						"type": "boolean"
+					},
+					"dagger|phb": {
+						"type": "boolean"
+					},
+					"flail|phb": {
+						"type": "boolean"
+					},
+					"glaive|phb": {
+						"type": "boolean"
+					},
+					"greataxe|phb": {
+						"type": "boolean"
+					},
+					"greatclub|phb": {
+						"type": "boolean"
+					},
+					"greatsword|phb": {
+						"type": "boolean"
+					},
+					"halberd|phb": {
+						"type": "boolean"
+					},
+					"handaxe|phb": {
+						"type": "boolean"
+					},
+					"javelin|phb": {
+						"type": "boolean"
+					},
+					"lance|phb": {
+						"type": "boolean"
+					},
+					"light hammer|phb": {
+						"type": "boolean"
+					},
+					"longsword|phb": {
+						"type": "boolean"
+					},
+					"mace|phb": {
+						"type": "boolean"
+					},
+					"maul|phb": {
+						"type": "boolean"
+					},
+					"morningstar|phb": {
+						"type": "boolean"
+					},
+					"pike|phb": {
+						"type": "boolean"
+					},
+					"quarterstaff|phb": {
+						"type": "boolean"
+					},
+					"rapier|phb": {
+						"type": "boolean"
+					},
+					"scimitar|phb": {
+						"type": "boolean"
+					},
+					"shortsword|phb": {
+						"type": "boolean"
+					},
+					"sickle|phb": {
+						"type": "boolean"
+					},
+					"spear|phb": {
+						"type": "boolean"
+					},
+					"staff|phb": {
+						"type": "boolean"
+					},
+					"trident|phb": {
+						"type": "boolean"
+					},
+					"war pick|phb": {
+						"type": "boolean"
+					},
+					"warhammer|phb": {
+						"type": "boolean"
+					},
+					"whip|phb": {
+						"type": "boolean"
+					},
+					"blowgun|phb": {
+						"type": "boolean"
+					},
+					"dart|phb": {
+						"type": "boolean"
+					},
+					"hand crossbow|phb": {
+						"type": "boolean"
+					},
+					"heavy crossbow|phb": {
+						"type": "boolean"
+					},
+					"light crossbow|phb": {
+						"type": "boolean"
+					},
+					"longbow|phb": {
+						"type": "boolean"
+					},
+					"net|phb": {
+						"type": "boolean"
+					},
+					"shortbow|phb": {
+						"type": "boolean"
+					},
+					"sling|phb": {
+						"type": "boolean"
+					},
+					"double-bladed scimitar|erlw": {
+						"type": "boolean"
+					},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -395,7 +556,9 @@
 								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
 								"type": "string"
 							},
-							"count": {"type": "integer"}
+							"count": {
+								"type": "integer"
+							}
 						},
 						"additionalProperties": false
 					}
@@ -403,33 +566,50 @@
 				"additionalProperties": false
 			}
 		},
-
 		"armorProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"light":  {"type": "boolean"},
-					"medium": {"type": "boolean"},
-					"heavy":  {"type": "boolean"},
-					"shield|phb": {"type": "boolean"}
+					"light": {
+						"type": "boolean"
+					},
+					"medium": {
+						"type": "boolean"
+					},
+					"heavy": {
+						"type": "boolean"
+					},
+					"shield|phb": {
+						"type": "boolean"
+					}
 				},
 				"additionalProperties": false
 			}
 		},
-
 		"savingThrowProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"str":  {"type": "boolean"},
-					"dex":  {"type": "boolean"},
-					"con":  {"type": "boolean"},
-					"int":  {"type": "boolean"},
-					"wis":  {"type": "boolean"},
-					"cha":  {"type": "boolean"},
-
+					"str": {
+						"type": "boolean"
+					},
+					"dex": {
+						"type": "boolean"
+					},
+					"con": {
+						"type": "boolean"
+					},
+					"int": {
+						"type": "boolean"
+					},
+					"wis": {
+						"type": "boolean"
+					},
+					"cha": {
+						"type": "boolean"
+					},
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -446,80 +626,171 @@
 									]
 								}
 							},
-							"count": {"type": "integer"}
+							"count": {
+								"type": "integer"
+							}
 						},
-						"required": ["from"],
+						"required": [
+							"from"
+						],
 						"additionalProperties": false
 					}
 				},
 				"additionalProperties": false
 			}
 		},
-
 		"expertise": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"anyProficientSkill": {"type": "number"},
-
-					"athletics": {"type": "boolean"},
-					"acrobatics":{"type": "boolean"},
-					"sleight of hand": {"type": "boolean"},
-					"stealth":{"type": "boolean"},
-					"arcana": {"type": "boolean"},
-					"history":{"type": "boolean"},
-					"investigation": {"type": "boolean"},
-					"nature":{"type": "boolean"},
-					"religion": {"type": "boolean"},
-					"animal handling":{"type": "boolean"},
-					"insight": {"type": "boolean"},
-					"medicine":{"type": "boolean"},
-					"perception": {"type": "boolean"},
-					"survival":{"type": "boolean"},
-					"deception": {"type": "boolean"},
-					"intimidation":{"type": "boolean"},
-					"performance": {"type": "boolean"},
-					"persuasion":{"type": "boolean"},
-
-
-
-					"anyProficientTool": {"type": "number"},
-
-					"artisan's tools": {"type": "boolean"},
-
-					"alchemist's supplies": {"type": "boolean"},
-					"brewer's supplies":{"type": "boolean"},
-					"calligrapher's supplies": {"type": "boolean"},
-					"carpenter's tools":{"type": "boolean"},
-					"cartographer's tools": {"type": "boolean"},
-					"cobbler's tools":{"type": "boolean"},
-					"cook's utensils": {"type": "boolean"},
-					"glassblower's tools":{"type": "boolean"},
-					"jeweler's tools": {"type": "boolean"},
-					"leatherworker's tools":{"type": "boolean"},
-					"mason's tools": {"type": "boolean"},
-					"painter's supplies":{"type": "boolean"},
-					"potter's tools": {"type": "boolean"},
-					"smith's tools":{"type": "boolean"},
-					"tinker's tools": {"type": "boolean"},
-					"weaver's tools":{"type": "boolean"},
-					"woodcarver's tools": {"type": "boolean"},
-
-					"disguise kit": {"type": "boolean"},
-					"forgery kit": {"type": "boolean"},
-					"gaming set": {"type": "boolean"},
-					"herbalism kit": {"type": "boolean"},
-					"musical instrument": {"type": "boolean"},
-					"navigator's tools": {"type": "boolean"},
-					"thieves' tools": {"type": "boolean"},
-					"vehicles (land)": {"type": "boolean"},
-					"vehicles (water)": {"type": "boolean"},
-					"poisoner's kit": {"type": "boolean"}
+					"anyProficientSkill": {
+						"type": "number"
+					},
+					"athletics": {
+						"type": "boolean"
+					},
+					"acrobatics": {
+						"type": "boolean"
+					},
+					"sleight of hand": {
+						"type": "boolean"
+					},
+					"stealth": {
+						"type": "boolean"
+					},
+					"arcana": {
+						"type": "boolean"
+					},
+					"history": {
+						"type": "boolean"
+					},
+					"investigation": {
+						"type": "boolean"
+					},
+					"nature": {
+						"type": "boolean"
+					},
+					"religion": {
+						"type": "boolean"
+					},
+					"animal handling": {
+						"type": "boolean"
+					},
+					"insight": {
+						"type": "boolean"
+					},
+					"medicine": {
+						"type": "boolean"
+					},
+					"perception": {
+						"type": "boolean"
+					},
+					"survival": {
+						"type": "boolean"
+					},
+					"deception": {
+						"type": "boolean"
+					},
+					"intimidation": {
+						"type": "boolean"
+					},
+					"performance": {
+						"type": "boolean"
+					},
+					"persuasion": {
+						"type": "boolean"
+					},
+					"anyProficientTool": {
+						"type": "number"
+					},
+					"artisan's tools": {
+						"type": "boolean"
+					},
+					"alchemist's supplies": {
+						"type": "boolean"
+					},
+					"brewer's supplies": {
+						"type": "boolean"
+					},
+					"calligrapher's supplies": {
+						"type": "boolean"
+					},
+					"carpenter's tools": {
+						"type": "boolean"
+					},
+					"cartographer's tools": {
+						"type": "boolean"
+					},
+					"cobbler's tools": {
+						"type": "boolean"
+					},
+					"cook's utensils": {
+						"type": "boolean"
+					},
+					"glassblower's tools": {
+						"type": "boolean"
+					},
+					"jeweler's tools": {
+						"type": "boolean"
+					},
+					"leatherworker's tools": {
+						"type": "boolean"
+					},
+					"mason's tools": {
+						"type": "boolean"
+					},
+					"painter's supplies": {
+						"type": "boolean"
+					},
+					"potter's tools": {
+						"type": "boolean"
+					},
+					"smith's tools": {
+						"type": "boolean"
+					},
+					"tinker's tools": {
+						"type": "boolean"
+					},
+					"weaver's tools": {
+						"type": "boolean"
+					},
+					"woodcarver's tools": {
+						"type": "boolean"
+					},
+					"disguise kit": {
+						"type": "boolean"
+					},
+					"forgery kit": {
+						"type": "boolean"
+					},
+					"gaming set": {
+						"type": "boolean"
+					},
+					"herbalism kit": {
+						"type": "boolean"
+					},
+					"musical instrument": {
+						"type": "boolean"
+					},
+					"navigator's tools": {
+						"type": "boolean"
+					},
+					"thieves' tools": {
+						"type": "boolean"
+					},
+					"vehicles (land)": {
+						"type": "boolean"
+					},
+					"vehicles (water)": {
+						"type": "boolean"
+					},
+					"poisoner's kit": {
+						"type": "boolean"
+					}
 				}
 			}
 		},
-
 		"_speedVal": {
 			"oneOf": [
 				{
@@ -532,7 +803,10 @@
 							"type": "string"
 						}
 					},
-					"required": ["number", "condition"],
+					"required": [
+						"number",
+						"condition"
+					],
 					"additionalProperties": false
 				},
 				{
@@ -540,7 +814,6 @@
 				}
 			]
 		},
-
 		"speed": {
 			"oneOf": [
 				{
@@ -587,7 +860,10 @@
 									"type": "string"
 								}
 							},
-							"required": ["amount", "from"],
+							"required": [
+								"amount",
+								"from"
+							],
 							"additionalProperties": false
 						},
 						"alternate": {
@@ -636,7 +912,6 @@
 				}
 			]
 		},
-
 		"prerequisite": {
 			"type": "array",
 			"items": {
@@ -664,7 +939,9 @@
 												"type": "boolean"
 											}
 										},
-										"required": ["name"],
+										"required": [
+											"name"
+										],
 										"additionalProperties": false
 									},
 									"subclass": {
@@ -681,11 +958,15 @@
 												"type": "boolean"
 											}
 										},
-										"required": ["name"],
+										"required": [
+											"name"
+										],
 										"additionalProperties": false
 									}
 								},
-								"required": ["level"],
+								"required": [
+									"level"
+								],
 								"additionalProperties": false
 							},
 							{
@@ -696,12 +977,22 @@
 					},
 					"pact": {
 						"type": "string",
-						"enum": ["Chain", "Tome", "Blade", "Talisman"]
+						"enum": [
+							"Blade",
+							"Chain",
+							"Tome",
+							"Talisman"
+						]
 					},
 					"patron": {
 						"type": "string",
 						"enum": [
-							"The Archfey", "The Fiend", "The Great Old One", "The Hexblade", "The Raven Queen", "The Seeker"
+							"The Archfey",
+							"The Fiend",
+							"The Great Old One",
+							"The Hexblade",
+							"The Raven Queen",
+							"The Seeker"
 						]
 					},
 					"spell": {
@@ -738,7 +1029,10 @@
 								"type": "string"
 							}
 						},
-						"required": ["entry", "entrySummary"]
+						"required": [
+							"entry",
+							"entrySummary"
+						]
 					},
 					"race": {
 						"type": "array",
@@ -756,7 +1050,9 @@
 									"type": "string"
 								}
 							},
-							"required": ["name"],
+							"required": [
+								"name"
+							],
 							"additionalProperties": false
 						}
 					},
@@ -804,11 +1100,18 @@
 							"properties": {
 								"armor": {
 									"type": "string",
-									"enum": ["light", "medium", "heavy"]
+									"enum": [
+										"light",
+										"medium",
+										"heavy"
+									]
 								},
 								"weapon": {
 									"type": "string",
-									"enum": ["simple", "martial"]
+									"enum": [
+										"simple",
+										"martial"
+									]
 								}
 							},
 							"additionalProperties": false
@@ -818,7 +1121,6 @@
 				"additionalProperties": false
 			}
 		},
-
 		"creatureType": {
 			"type": "string",
 			"enum": [
@@ -838,9 +1140,9 @@
 				"undead"
 			]
 		},
-
 		"alignment": {
 			"type": "string",
+			"description": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any",
 			"enum": [
 				"L",
 				"N",
@@ -853,10 +1155,9 @@
 				"A"
 			]
 		},
-
 		"size": {
 			"type": "string",
-			"description": "Stands for: Fine, Diminutive, Tiny, Small, Medium, Large, Huge, Gargantuan, Colossal, Varies.",
+			"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
 			"enum": [
 				"F",
 				"D",
@@ -870,7 +1171,6 @@
 				"V"
 			]
 		},
-
 		"dataCondition": {
 			"type": "string",
 			"enum": [
@@ -889,11 +1189,9 @@
 				"restrained",
 				"stunned",
 				"unconscious",
-
 				"disease"
 			]
 		},
-
 		"dataDamageType": {
 			"type": "string",
 			"enum": [
@@ -912,14 +1210,39 @@
 				"thunder"
 			]
 		},
-
 		"dataOptionalfeatureType": {
 			"type": "string",
+			"description": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon",
 			"enum": [
-				"ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:R", "FS:P", "MV:C2-UA", "AS:V1-UA", "AS:V2-UA", "AS", "PB", "AI", "SHP:H", "SHP:M", "SHP:W", "SHP:F", "SHP:O", "IWM:W", "IWM:A", "IWM:G", "OR", "RN", "AF"
+				"AF",
+				"AI",
+				"AS",
+				"AS:V1-UA",
+				"AS:V2-UA",
+				"ED",
+				"EI",
+				"FS:B",
+				"FS:F",
+				"FS:P",
+				"FS:R",
+				"IWM:A",
+				"IWM:G",
+				"IWM:W",
+				"MM",
+				"MV",
+				"MV:B",
+				"MV:C2-UA",
+				"OR",
+				"OTH",
+				"PB",
+				"RN",
+				"SHP:F",
+				"SHP:H",
+				"SHP:M",
+				"SHP:O",
+				"SHP:W"
 			]
 		},
-
 		"damageImmunityArray": {
 			"oneOf": [
 				{
@@ -937,7 +1260,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["special"]
+								"required": [
+									"special"
+								]
 							},
 							{
 								"type": "object",
@@ -956,7 +1281,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["immune"]
+								"required": [
+									"immune"
+								]
 							}
 						]
 					}
@@ -984,14 +1311,15 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["from"]
+								"required": [
+									"from"
+								]
 							}
 						}
 					}
 				]
 			}
 		},
-
 		"damageResistArray": {
 			"oneOf": [
 				{
@@ -1009,7 +1337,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["special"]
+								"required": [
+									"special"
+								]
 							},
 							{
 								"type": "object",
@@ -1028,7 +1358,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["resist"]
+								"required": [
+									"resist"
+								]
 							}
 						]
 					}
@@ -1056,15 +1388,16 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["from"]
+								"required": [
+									"from"
+								]
 							}
 						}
 					}
 				]
 			}
 		},
-
-		"damageVulnerabilityArray":  {
+		"damageVulnerabilityArray": {
 			"oneOf": [
 				{
 					"type": "array",
@@ -1081,7 +1414,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["special"]
+								"required": [
+									"special"
+								]
 							},
 							{
 								"type": "object",
@@ -1100,7 +1435,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["vulnerable"]
+								"required": [
+									"vulnerable"
+								]
 							}
 						]
 					}
@@ -1128,14 +1465,15 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["from"]
+								"required": [
+									"from"
+								]
 							}
 						}
 					}
 				]
 			}
 		},
-
 		"conditionImmunityArray": {
 			"oneOf": [
 				{
@@ -1153,7 +1491,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["special"]
+								"required": [
+									"special"
+								]
 							},
 							{
 								"type": "object",
@@ -1169,7 +1509,9 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["conditionImmune"]
+								"required": [
+									"conditionImmune"
+								]
 							}
 						]
 					}
@@ -1197,14 +1539,15 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": ["from"]
+								"required": [
+									"from"
+								]
 							}
 						}
 					}
 				]
 			}
 		},
-
 		"genericFluffArrayItemData": {
 			"type": "object",
 			"properties": {
@@ -1235,7 +1578,6 @@
 				}
 			}
 		},
-
 		"genericFluffArray": {
 			"type": "array",
 			"items": {
@@ -1246,7 +1588,10 @@
 								"$ref": "#/definitions/genericFluffArrayItemData"
 							},
 							{
-								"required": ["name", "source"]
+								"required": [
+									"name",
+									"source"
+								]
 							}
 						]
 					},
@@ -1264,7 +1609,6 @@
 				]
 			}
 		},
-
 		"tagsConditions": {
 			"type": "array",
 			"uniqueItems": true,
@@ -1289,147 +1633,290 @@
 				]
 			}
 		},
-
 		"copyModifier": {
 			"anyOf": [
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "replaceTxt"},
-						"replace": {"type":  "string"},
-						"with": {"type":  "string"},
-						"flags":  {"type":  "string"}
+						"mode": {
+							"const": "replaceTxt"
+						},
+						"replace": {
+							"type": "string"
+						},
+						"with": {
+							"type": "string"
+						},
+						"flags": {
+							"type": "string"
+						}
 					},
-					"required": ["replace", "with"],
+					"required": [
+						"replace",
+						"with"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "appendStr"},
-						"str": {"type":  "string"},
-						"joiner": {"type":  "string"}
+						"mode": {
+							"const": "appendStr"
+						},
+						"str": {
+							"type": "string"
+						},
+						"joiner": {
+							"type": "string"
+						}
 					},
-					"required": ["str"],
+					"required": [
+						"str"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "prependArr"},
+						"mode": {
+							"const": "prependArr"
+						},
 						"items": {
 							"anyOf": [
-								{"type":  "string"},
-								{"type":  "object"},
-								{"type":  "array"}
+								{
+									"type": "string"
+								},
+								{
+									"type": "object"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["items"],
+					"required": [
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "appendArr"},
+						"mode": {
+							"const": "appendArr"
+						},
 						"items": {
 							"anyOf": [
-								{"type":  "string"},
-								{"type":  "object"},
-								{"type":  "array"}
+								{
+									"type": "string"
+								},
+								{
+									"type": "object"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["items"],
+					"required": [
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "appendIfNotExistsArr"},
+						"mode": {
+							"const": "appendIfNotExistsArr"
+						},
 						"items": {
 							"anyOf": [
-								{"type":  "string"},
-								{"type":  "object"},
-								{"type":  "array"}
+								{
+									"type": "string"
+								},
+								{
+									"type": "object"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["items"],
+					"required": [
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "replaceArr"},
+						"mode": {
+							"const": "replaceArr"
+						},
 						"replace": {
 							"oneOf": [
-								{"type":  "string"},
-								{"type":  "object", "properties": {"index":  {"type": "integer"}}, "required": ["index"], "additionalProperties": false},
-								{"type":  "object", "properties": {"regex":  {"type": "string"}, "flags": {"type": "string"}}, "required": ["regex"], "additionalProperties": false}
+								{
+									"type": "string"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"index": {
+											"type": "integer"
+										}
+									},
+									"required": [
+										"index"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"regex": {
+											"type": "string"
+										},
+										"flags": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"regex"
+									],
+									"additionalProperties": false
+								}
 							]
 						},
 						"items": {
 							"anyOf": [
-								{"type":  "object"},
-								{"type":  "array"}
+								{
+									"type": "object"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["replace", "items"],
+					"required": [
+						"replace",
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "replaceOrAppendArr"},
+						"mode": {
+							"const": "replaceOrAppendArr"
+						},
 						"replace": {
 							"oneOf": [
-								{"type":  "string"},
-								{"type":  "object", "properties": {"index":  {"type": "integer"}}, "required": ["index"], "additionalProperties": false},
-								{"type":  "object", "properties": {"regex":  {"type": "string"}, "flags": {"type": "string"}}, "required": ["regex"], "additionalProperties": false}
+								{
+									"type": "string"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"index": {
+											"type": "integer"
+										}
+									},
+									"required": [
+										"index"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"regex": {
+											"type": "string"
+										},
+										"flags": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"regex"
+									],
+									"additionalProperties": false
+								}
 							]
 						},
 						"items": {
 							"anyOf": [
-								{"type":  "object"},
-								{"type":  "array"}
+								{
+									"type": "object"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["replace", "items"],
+					"required": [
+						"replace",
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "insertArr"},
-						"index": {"type": "integer"},
+						"mode": {
+							"const": "insertArr"
+						},
+						"index": {
+							"type": "integer"
+						},
 						"items": {
 							"anyOf": [
-								{"type":  "object"},
-								{"type":  "string"},
-								{"type":  "array"}
+								{
+									"type": "object"
+								},
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								}
 							]
 						}
 					},
-					"required": ["index", "items"],
+					"required": [
+						"index",
+						"items"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "removeArr"},
+						"mode": {
+							"const": "removeArr"
+						},
 						"names": {
 							"anyOf": [
-								{"type":  "string"},
-								{"type":  "array"}
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								}
 							]
 						},
 						"items": {
 							"anyOf": [
-								{"type":  "string"},
-								{"type":  "array"}
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								}
 							]
 						},
 						"force": {
@@ -1441,60 +1928,106 @@
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "calculateProp"},
-						"prop": {"type": "string"},
-						"formula": {"type": "string"}
+						"mode": {
+							"const": "calculateProp"
+						},
+						"prop": {
+							"type": "string"
+						},
+						"formula": {
+							"type": "string"
+						}
 					},
-					"required": ["prop", "formula"],
+					"required": [
+						"prop",
+						"formula"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "replaceSpells"},
-						"spells": {"type": "object"},
-						"daily": {"type": "object"}
+						"mode": {
+							"const": "replaceSpells"
+						},
+						"spells": {
+							"type": "object"
+						},
+						"daily": {
+							"type": "object"
+						}
 					},
-					"required": ["mode"],
+					"required": [
+						"mode"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "addSpells"},
-						"spells": {"type": "object"},
-						"will": {"type": "array"},
-						"daily": {"type": "object"}
+						"mode": {
+							"const": "addSpells"
+						},
+						"spells": {
+							"type": "object"
+						},
+						"will": {
+							"type": "array"
+						},
+						"daily": {
+							"type": "object"
+						}
 					},
-					"required": ["mode"],
+					"required": [
+						"mode"
+					],
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
-						"mode": {"const": "addSkills"},
-						"skills": {"type": "object"}
+						"mode": {
+							"const": "addSkills"
+						},
+						"skills": {
+							"type": "object"
+						}
 					},
-					"required": ["mode", "skills"],
+					"required": [
+						"mode",
+						"skills"
+					],
 					"additionalProperties": false
 				}
 			]
 		},
-
 		"copyBlock": {
 			"properties": {
 				"_copy": {
 					"type": "object",
 					"properties": {
-						"name": {"type": "string"},
-						"source": {"type": "string"},
-
-						"pantheon": {"description": "Used in deity data", "type": "string"},
-
-						"shortName": {"description": "Used in subclass data", "type": "string"},
-						"className": {"description": "Used in subclass data", "type": "string"},
-						"classSource": {"description": "Used in subclass data", "type": "string"},
-
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"pantheon": {
+							"description": "Used in deity data",
+							"type": "string"
+						},
+						"shortName": {
+							"description": "Used in subclass data",
+							"type": "string"
+						},
+						"className": {
+							"description": "Used in subclass data",
+							"type": "string"
+						},
+						"classSource": {
+							"description": "Used in subclass data",
+							"type": "string"
+						},
 						"_mod": {
 							"type": "object",
 							"patternProperties": {
@@ -1519,10 +2052,17 @@
 						"_trait": {
 							"type": "object",
 							"properties": {
-								"name": {"type": "string"},
-								"source": {"type": "string"}
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"type": "string"
+								}
 							},
-							"required": ["name", "source"]
+							"required": [
+								"name",
+								"source"
+							]
 						},
 						"_preserve": {
 							"type": "object",
@@ -1533,14 +2073,16 @@
 							}
 						}
 					},
-					"required": ["name", "source"]
+					"required": [
+						"name",
+						"source"
+					]
 				}
 			},
 			"required": [
 				"_copy"
 			]
 		},
-
 		"srd": {
 			"oneOf": [
 				{
@@ -1551,7 +2093,6 @@
 				}
 			]
 		},
-
 		"fluffObject": {
 			"type": "object",
 			"properties": {
@@ -1569,7 +2110,6 @@
 				}
 			}
 		},
-
 		"_additionalSpellObject": {
 			"type": "object",
 			"patternProperties": {
@@ -1610,7 +2150,6 @@
 				}
 			}
 		},
-
 		"_additionalSpellLevelObject": {
 			"type": "object",
 			"properties": {
@@ -1641,52 +2180,91 @@
 			},
 			"additionalProperties": false
 		},
-
 		"_additionalSpellRechargeObject": {
 			"type": "object",
 			"properties": {
-				"9e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"8e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"7e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"6e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"5e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"4e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"3e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"2e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"1e": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-
-				"9": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"8": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"7": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"6": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"5": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"4": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"3": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"2": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"},
-				"1": {"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"}
+				"1": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"2": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"3": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"4": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"5": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"6": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"7": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"8": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"9": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"9e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"8e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"7e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"6e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"5e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"4e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"3e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"2e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				},
+				"1e": {
+					"$ref": "#/definitions/_additionalSpellArrayOfStringOrChoiceObject"
+				}
 			},
 			"additionalProperties": false
 		},
-
 		"_additionalSpellArrayOfStringOrChoiceObject": {
 			"type": "array",
 			"items": {
 				"oneOf": [
-					{"type": "string"},
-
+					{
+						"type": "string"
+					},
 					{
 						"type": "object",
 						"properties": {
-							"choose": {"type": "string"},
-							"count": {"type": "integer"}
+							"choose": {
+								"type": "string"
+							},
+							"count": {
+								"type": "integer"
+							}
 						},
-						"required": ["choose"],
+						"required": [
+							"choose"
+						],
 						"additionalProperties": false
 					}
 				]
 			}
 		},
-
 		"additionalSpellsArray": {
 			"description": "A collection of additional spells which a feature grants.",
 			"type": "array",
@@ -1705,19 +2283,36 @@
 								"properties": {
 									"choose": {
 										"type": "array",
-										"items":{
+										"items": {
 											"type": "string",
-											"enum": ["str", "dex", "con", "int", "wis", "cha"]
+											"enum": [
+												"str",
+												"dex",
+												"con",
+												"int",
+												"wis",
+												"cha"
+											]
 										}
 									}
 								},
-								"required": ["choose"],
+								"required": [
+									"choose"
+								],
 								"additionalProperties": false
 							},
 							{
 								"description": "\"inherit\" is used for special cases, where the ability score matches a choice the player made when taking the feature",
 								"type": "string",
-								"enum": ["str", "dex", "con", "int", "wis", "cha", "inherit"]
+								"enum": [
+									"str",
+									"dex",
+									"con",
+									"int",
+									"wis",
+									"cha",
+									"inherit"
+								]
 							}
 						]
 					},
@@ -1742,7 +2337,6 @@
 				"minProperties": 1
 			}
 		},
-
 		"startingEquipment": {
 			"description": "Optional well-structured data version of the \"default\" property, for use in applications that require it.",
 			"type": "array",
@@ -1776,7 +2370,9 @@
 											"type": "integer"
 										}
 									},
-									"required": ["item"],
+									"required": [
+										"item"
+									],
 									"additionalProperties": false
 								},
 								{
@@ -1785,26 +2381,28 @@
 										"equipmentType": {
 											"type": "string",
 											"enum": [
+												"armorLight",
+												"armorMedium",
+												"armorHeavy",
+												"focusSpellcasting",
+												"instrumentMusical",
+												"setGaming",
+												"toolArtisan",
 												"weaponSimple",
 												"weaponSimpleMelee",
 												"weaponMartial",
 												"weaponMartialMelee",
-												"instrumentMusical",
-												"armorLight",
-												"armorMedium",
-												"armorHeavy",
 												"weaponMelee",
-												"weaponRanged",
-												"focusSpellcasting",
-												"setGaming",
-												"toolArtisan"
+												"weaponRanged"
 											]
 										},
 										"quantity": {
 											"type": "integer"
 										}
 									},
-									"required": ["equipmentType"],
+									"required": [
+										"equipmentType"
+									],
 									"additionalProperties": false
 								},
 								{
@@ -1815,7 +2413,9 @@
 											"type": "integer"
 										}
 									},
-									"required": ["value"],
+									"required": [
+										"value"
+									],
 									"additionalProperties": false
 								},
 								{
@@ -1837,7 +2437,9 @@
 											"type": "integer"
 										}
 									},
-									"required": ["special"],
+									"required": [
+										"special"
+									],
 									"additionalProperties": false
 								}
 							]
@@ -1846,35 +2448,63 @@
 				}
 			}
 		},
-
 		"reqAttuneTags": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"background":{"type": "string"},
-					"race": {"type": "string"},
-					"creatureType":{"$ref": "util.json#/definitions/creatureType"},
-					"size": {"type": "string"},
-					"class":{"type": "string"},
-
-					"languageProficiency": {"$ref": "#/definitions/languageNameLower"},
-					"skillProficiency": {"$ref": "#/definitions/skillNameLower"},
-
+					"background": {
+						"type": "string"
+					},
+					"race": {
+						"type": "string"
+					},
+					"creatureType": {
+						"$ref": "util.json#/definitions/creatureType"
+					},
+					"size": {
+						"type": "string"
+					},
+					"class": {
+						"type": "string"
+					},
+					"languageProficiency": {
+						"$ref": "#/definitions/languageNameLower"
+					},
+					"skillProficiency": {
+						"$ref": "#/definitions/skillNameLower"
+					},
 					"alignment": {
 						"type": "array",
-						"items": {"$ref": "util.json#/definitions/alignment"}
+						"description": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any",
+						"items": {
+							"$ref": "util.json#/definitions/alignment"
+						}
 					},
-
-					"str": {"type": "integer"},
-					"dex": {"type": "integer"},
-					"con": {"type": "integer"},
-					"int": {"type": "integer"},
-					"wis": {"type": "integer"},
-					"cha": {"type": "integer"},
-
-					"spellcasting":{"type": "boolean"},
-					"psionics": {"type": "boolean"}
+					"str": {
+						"type": "integer"
+					},
+					"dex": {
+						"type": "integer"
+					},
+					"con": {
+						"type": "integer"
+					},
+					"int": {
+						"type": "integer"
+					},
+					"wis": {
+						"type": "integer"
+					},
+					"cha": {
+						"type": "integer"
+					},
+					"spellcasting": {
+						"type": "boolean"
+					},
+					"psionics": {
+						"type": "boolean"
+					}
 				}
 			}
 		}

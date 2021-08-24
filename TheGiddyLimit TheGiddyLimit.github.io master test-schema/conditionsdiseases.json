@@ -29,8 +29,12 @@
 					"description": "For homebrew use only.",
 					"type": "string"
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
 			},
 			"required": [
 				"name",

@@ -3,7 +3,6 @@
 	"$id": "trapshazards.json",
 	"version": "1.1.2",
 	"type": "object",
-
 	"definitions": {
 		"trap": {
 			"oneOf": [
@@ -16,9 +15,10 @@
 						},
 						"trapHazType": {
 							"type": "string",
+							"description": "MAG: Magical Trap\n MECH: Mechanical Trap",
 							"enum": [
-								"MECH",
-								"MAG"
+								"MAG",
+								"MECH"
 							]
 						},
 						"source": {
@@ -33,7 +33,9 @@
 								"$ref": "entry.json"
 							}
 						},
-						"srd": {"$ref": "util.json#/definitions/srd"}
+						"srd": {
+							"$ref": "util.json#/definitions/srd"
+						}
 					},
 					"additionalProperties": false,
 					"required": [
@@ -93,7 +95,9 @@
 								"$ref": "entry.json"
 							}
 						},
-						"srd": {"$ref": "util.json#/definitions/srd"}
+						"srd": {
+							"$ref": "util.json#/definitions/srd"
+						}
 					},
 					"additionalProperties": false,
 					"required": [
@@ -177,7 +181,9 @@
 								"$ref": "entry.json"
 							}
 						},
-						"srd": {"$ref": "util.json#/definitions/srd"}
+						"srd": {
+							"$ref": "util.json#/definitions/srd"
+						}
 					},
 					"additionalProperties": false,
 					"required": [
@@ -194,7 +200,6 @@
 				}
 			]
 		},
-
 		"hazard": {
 			"type": "object",
 			"properties": {
@@ -203,12 +208,13 @@
 				},
 				"trapHazType": {
 					"type": "string",
+					"description": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
 					"enum": [
-						"WTH",
 						"ENV",
-						"WLD",
+						"EST",
 						"GEN",
-						"EST"
+						"WTH",
+						"WLD"
 					]
 				},
 				"source": {
@@ -223,7 +229,9 @@
 						"$ref": "entry.json"
 					}
 				},
-				"srd": {"$ref": "util.json#/definitions/srd"}
+				"srd": {
+					"$ref": "util.json#/definitions/srd"
+				}
 			},
 			"additionalProperties": false,
 			"required": [
@@ -233,7 +241,6 @@
 			]
 		}
 	},
-
 	"properties": {
 		"trap": {
 			"type": "array",

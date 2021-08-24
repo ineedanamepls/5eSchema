@@ -3,7 +3,6 @@
 	"$id": "races.json",
 	"version": "1.7.0",
 	"type": "object",
-
 	"definitions": {
 		"subraceData": {
 			"type": "object",
@@ -136,12 +135,15 @@
 						}
 					]
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
 			},
 			"additionalProperties": false
 		},
-
 		"raceData": {
 			"type": "object",
 			"properties": {
@@ -173,11 +175,15 @@
 					"$ref": "util.json#/definitions/speed"
 				},
 				"size": {
-					"description": "An array of choices.",
+					"description": "M: Medium\n S: Small\n V: Varies",
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["M", "S", "V"]
+						"enum": [
+							"M",
+							"S",
+							"V"
+						]
 					}
 				},
 				"entries": {
@@ -294,7 +300,10 @@
 				},
 				"lineage": {
 					"type": "string",
-					"enum": ["UA1", "VRGR"]
+					"enum": [
+						"UA1",
+						"VRGR"
+					]
 				},
 				"creatureTypes": {
 					"type": "array",
@@ -310,7 +319,9 @@
 										}
 									}
 								},
-								"required": ["choose"],
+								"required": [
+									"choose"
+								],
 								"additionalProperties": false
 							},
 							{
@@ -319,12 +330,15 @@
 						]
 					}
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
 			},
 			"additionalProperties": false
 		},
-
 		"traitTag": {
 			"type": "string",
 			"enum": [
@@ -352,7 +366,6 @@
 				"Weapon Proficiency"
 			]
 		},
-
 		"abilityScores": {
 			"type": "array",
 			"items": {
@@ -382,7 +395,14 @@
 							"from": {
 								"type": "array",
 								"items": {
-									"enum": ["str", "dex", "con", "int", "wis", "cha"]
+									"enum": [
+										"con",
+										"cha",
+										"dex",
+										"int",
+										"str",
+										"wis"
+									]
 								},
 								"uniqueItems": true
 							},
@@ -398,7 +418,14 @@
 									"from": {
 										"type": "array",
 										"items": {
-											"enum": ["str", "dex", "con", "int", "wis", "cha"]
+											"enum": [
+												"con",
+												"cha",
+												"dex",
+												"int",
+												"str",
+												"wis"
+											]
 										},
 										"uniqueItems": true
 									},
@@ -415,14 +442,21 @@
 				}
 			}
 		},
-
 		"heightAndWeight": {
 			"type": "object",
 			"properties": {
-				"baseHeight":  {"type": "integer"},
-				"heightMod": {"type": "string"},
-				"baseWeight":  {"type": "integer"},
-				"weightMod": {"type": "string"}
+				"baseHeight": {
+					"type": "integer"
+				},
+				"heightMod": {
+					"type": "string"
+				},
+				"baseWeight": {
+					"type": "integer"
+				},
+				"weightMod": {
+					"type": "string"
+				}
 			},
 			"required": [
 				"baseHeight",
@@ -431,7 +465,6 @@
 			],
 			"additionalProperties": false
 		},
-
 		"race": {
 			"anyOf": [
 				{
@@ -460,7 +493,6 @@
 			]
 		}
 	},
-
 	"properties": {
 		"race": {
 			"type": "array",

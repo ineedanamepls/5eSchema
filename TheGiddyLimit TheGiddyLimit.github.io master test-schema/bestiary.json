@@ -9,6 +9,7 @@
 			"oneOf": [
 				{
 					"type": "string",
+					"description": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any",
 					"enum": [
 						"L",
 						"N",
@@ -38,7 +39,9 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": ["alignment"]
+					"required": [
+						"alignment"
+					]
 				},
 				{
 					"type": "object",
@@ -48,7 +51,9 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": ["special"]
+					"required": [
+						"special"
+					]
 				}
 			]
 		},
@@ -73,7 +78,9 @@
 							"type": "boolean"
 						}
 					},
-					"required": ["ac"],
+					"required": [
+						"ac"
+					],
 					"additionalProperties": false
 				},
 				{
@@ -83,7 +90,9 @@
 							"type": "string"
 						}
 					},
-					"required": ["special"],
+					"required": [
+						"special"
+					],
 					"additionalProperties": false
 				},
 				{
@@ -91,8 +100,7 @@
 				}
 			]
 		},
-
-		"creatureData":  {
+		"creatureData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -118,7 +126,10 @@
 				},
 				"group": {
 					"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything",
-					"type": ["string", "null"]
+					"type": [
+						"string",
+						"null"
+					]
 				},
 				"level": {
 					"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
@@ -215,6 +226,7 @@
 				},
 				"alignment": {
 					"type": "array",
+					"description": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any",
 					"items": {
 						"$ref": "#/definitions/align"
 					}
@@ -259,7 +271,7 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
@@ -269,7 +281,7 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
@@ -279,7 +291,7 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
@@ -289,7 +301,7 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
@@ -299,7 +311,7 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
@@ -309,19 +321,31 @@
 							"type": "integer"
 						},
 						{
-							"type":"null"
+							"type": "null"
 						}
 					]
 				},
 				"save": {
 					"type": "object",
 					"properties": {
-						"str": {"type": "string"},
-						"dex": {"type": "string"},
-						"con": {"type": "string"},
-						"int": {"type": "string"},
-						"wis": {"type": "string"},
-						"cha": {"type": "string"},
+						"str": {
+							"type": "string"
+						},
+						"dex": {
+							"type": "string"
+						},
+						"con": {
+							"type": "string"
+						},
+						"int": {
+							"type": "string"
+						},
+						"wis": {
+							"type": "string"
+						},
+						"cha": {
+							"type": "string"
+						},
 						"special": {
 							"description": "For use in homebrew.",
 							"$ref": "entry.json"
@@ -394,24 +418,60 @@
 									"oneOf": {
 										"type": "object",
 										"properties": {
-											"acrobatics": {"type": "string"},
-											"animal handling": {"type": "string"},
-											"arcana": {"type": "string"},
-											"athletics": {"type": "string"},
-											"deception": {"type": "string"},
-											"history": {"type": "string"},
-											"insight": {"type": "string"},
-											"intimidation": {"type": "string"},
-											"investigation": {"type": "string"},
-											"medicine": {"type": "string"},
-											"nature": {"type": "string"},
-											"perception": {"type": "string"},
-											"performance": {"type": "string"},
-											"persuasion": {"type": "string"},
-											"religion": {"type": "string"},
-											"sleight of hand": {"type": "string"},
-											"stealth": {"type": "string"},
-											"survival": {"type": "string"}
+											"acrobatics": {
+												"type": "string"
+											},
+											"animal handling": {
+												"type": "string"
+											},
+											"arcana": {
+												"type": "string"
+											},
+											"athletics": {
+												"type": "string"
+											},
+											"deception": {
+												"type": "string"
+											},
+											"history": {
+												"type": "string"
+											},
+											"insight": {
+												"type": "string"
+											},
+											"intimidation": {
+												"type": "string"
+											},
+											"investigation": {
+												"type": "string"
+											},
+											"medicine": {
+												"type": "string"
+											},
+											"nature": {
+												"type": "string"
+											},
+											"perception": {
+												"type": "string"
+											},
+											"performance": {
+												"type": "string"
+											},
+											"persuasion": {
+												"type": "string"
+											},
+											"religion": {
+												"type": "string"
+											},
+											"sleight of hand": {
+												"type": "string"
+											},
+											"stealth": {
+												"type": "string"
+											},
+											"survival": {
+												"type": "string"
+											}
 										}
 									}
 								}
@@ -485,7 +545,9 @@
 								}
 							},
 							"additionalProperties": false,
-							"required": ["cr"]
+							"required": [
+								"cr"
+							]
 						}
 					]
 				},
@@ -532,7 +594,10 @@
 									},
 									"type": {
 										"type": "string",
-										"enum": ["entries", "inset"]
+										"enum": [
+											"entries",
+											"inset"
+										]
 									},
 									"sort": {
 										"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
@@ -732,7 +797,10 @@
 										"type": "integer"
 									}
 								},
-								"required": ["name", "source"]
+								"required": [
+									"name",
+									"source"
+								]
 							},
 							"variantSource": {
 								"type": "object",
@@ -779,7 +847,10 @@
 								"type": "integer"
 							}
 						},
-						"required": ["name", "source"]
+						"required": [
+							"name",
+							"source"
+						]
 					}
 				},
 				"fluff": {
@@ -852,7 +923,16 @@
 				"dragonCastingColor": {
 					"type": "string",
 					"enum": [
-						"B", "U", "G", "R", "W", "A", "Z", "C", "O", "S"
+						"B",
+						"U",
+						"G",
+						"R",
+						"W",
+						"A",
+						"Z",
+						"C",
+						"O",
+						"S"
 					]
 				},
 				"traitTags": {
@@ -923,7 +1003,35 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"AB", "AQ", "AU", "C", "CE", "CS","D", "DR", "DS", "DU", "E", "G", "GI", "GO", "GTH", "H", "I", "IG", "LF", "O", "OTH", "P", "S", "T", "TC", "TP", "U", "X", "XX"
+							"AB",
+							"AQ",
+							"AU",
+							"C",
+							"CE",
+							"CS",
+							"D",
+							"DR",
+							"DS",
+							"DU",
+							"E",
+							"G",
+							"GI",
+							"GO",
+							"GTH",
+							"H",
+							"I",
+							"IG",
+							"LF",
+							"O",
+							"OTH",
+							"P",
+							"S",
+							"T",
+							"TC",
+							"TP",
+							"U",
+							"X",
+							"XX"
 						]
 					}
 				},
@@ -931,28 +1039,69 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["B", "D", "SD", "T", "U"]
+						"enum": [
+							"B",
+							"D",
+							"SD",
+							"T",
+							"U"
+						]
 					}
 				},
 				"spellcastingTags": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["P", "I", "F", "S", "CA", "CB", "CC", "CD", "CP", "CR", "CS", "CL", "CW"]
+						"enum": [
+							"P",
+							"I",
+							"F",
+							"S",
+							"CA",
+							"CB",
+							"CC",
+							"CD",
+							"CP",
+							"CR",
+							"CS",
+							"CL",
+							"CW"
+						]
 					}
 				},
 				"damageTags": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["A", "B", "C", "F", "O", "L", "N", "P", "I", "Y", "R", "S", "T"]
+						"enum": [
+							"A",
+							"B",
+							"C",
+							"F",
+							"O",
+							"L",
+							"N",
+							"P",
+							"I",
+							"Y",
+							"R",
+							"S",
+							"T"
+						]
 					}
 				},
 				"miscTags": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["MW", "RW", "RCH", "THW", "RNG", "AOE"]
+						"enum": [
+							"MW",
+							"RW",
+							"RCH",
+							"THW",
+							"RNG",
+							"AOE"
+						]
 					}
 				},
 				"conditionInflict": {
@@ -982,11 +1131,14 @@
 					"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
 					"type": "boolean"
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
 			}
 		},
-
 		"creature": {
 			"anyOf": [
 				{

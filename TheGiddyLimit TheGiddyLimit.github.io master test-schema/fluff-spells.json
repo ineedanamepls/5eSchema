@@ -3,7 +3,6 @@
 	"$id": "fluff-spells.json",
 	"version": "1.0.0",
 	"type": "object",
-
 	"properties": {
 		"spellFluff": {
 			"$ref": "util.json#/definitions/genericFluffArray"

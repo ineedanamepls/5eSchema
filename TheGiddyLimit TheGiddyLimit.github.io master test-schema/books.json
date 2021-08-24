@@ -69,10 +69,19 @@
 									"properties": {
 										"type": {
 											"type": "string",
-											"enum": ["chapter", "appendix", "part", "episode", "level"]
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level"
+											]
 										},
 										"identifier": {
-											"type": ["integer", "string"]
+											"type": [
+												"integer",
+												"string"
+											]
 										}
 									},
 									"additionalProperties": false,
@@ -100,12 +109,3 @@
 		}
 	}
 }
-
-
-
-
-
-
-
-
-

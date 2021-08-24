@@ -39,12 +39,13 @@
 			"additionalProperties": false
 		}
 	},
-
 	"properties": {
 		"legendaryGroup": {
 			"type": "array",
 			"uniqueItems": true,
-			"items": {"$ref": "#/definitions/legendaryGroup"}
+			"items": {
+				"$ref": "#/definitions/legendaryGroup"
+			}
 		}
 	}
 }

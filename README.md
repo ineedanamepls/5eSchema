@@ -1,4 +1,4 @@
-Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optinalfeature`:
+Important use instruction: If you want to use homebrew featurs of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. Example with `optionalfeature`:
 ```
 "optionalfeature": [
     {
@@ -43,7 +43,7 @@ Just modified the actual 5e.tools Schema to one that can be used in your Editor.
     "fileMatch": [
         "*.json"
     ],
-    "url": "./TheGiddyLimit TheGiddyLimit.github.io master test-schema/schema.json"
+    "url": "./5etools Homebrew Schema/schema.json"
 }
 ```
 Every json file you make in this workplace folder now will use this schema.  
