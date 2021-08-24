@@ -156,6 +156,9 @@
 						"hp": {
 							"type": "integer"
 						},
+						"hpNote": {
+							"type": "string"
+						},
 						"dt": {
 							"type": "integer"
 						}
