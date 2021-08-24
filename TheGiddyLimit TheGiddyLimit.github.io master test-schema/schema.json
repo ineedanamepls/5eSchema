@@ -432,6 +432,9 @@
 		},
 		"adventureData": {
 			"$ref": "adventureData.json#/properties/adventureData"
+		},
+		"$schema": {
+			"type": "string"
 		}
 	},
 	"additionalProperties": false
