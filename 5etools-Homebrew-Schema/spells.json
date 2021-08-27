@@ -1,0 +1,677 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "spells.json",
+	"version": "1.6.5",
+	"title": "Spells",
+	"type": "object",
+	"definitions": {
+		"spellData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"level": {
+					"type": "integer"
+				},
+				"school": {
+					"type": "string",
+					"description": "A: Abjuration\n C: Conjuration\n D: Divination\n E: Enchantment\n V: Evocation\n I: Illusion\n N: Necromancy\n P: Psionic\n T: Transmutation",
+					"enum": [
+						"A",
+						"C",
+						"D",
+						"E",
+						"V",
+						"I",
+						"N",
+						"P",
+						"T"
+					]
+				},
+				"subschools": {
+					"description": "For homebrew use only.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"meta": {
+					"type": "object",
+					"properties": {
+						"ritual": {
+							"type": "boolean"
+						},
+						"technomagic": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"time": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/time"
+					}
+				},
+				"range": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"type": "string",
+							"enum": [
+								"cube",
+								"cone",
+								"cylinder",
+								"hemisphere",
+								"line",
+								"point",
+								"radius",
+								"special",
+								"sphere"
+							]
+						},
+						"distance": {
+							"type": "object",
+							"properties": {
+								"type": {
+									"type": "string",
+									"enum": [
+										"feet",
+										"miles",
+										"plane",
+										"self",
+										"sight",
+										"touch",
+										"unlimited"
+									]
+								},
+								"amount": {
+									"type": "integer"
+								},
+								"typeSecondary": {
+									"description": "Homebrew only",
+									"type": "string",
+									"enum": [
+										"feet",
+										"miles",
+										"plane",
+										"self",
+										"sight",
+										"touch",
+										"unlimited"
+									]
+								},
+								"amountSecondary": {
+									"description": "Homebrew only",
+									"type": "integer"
+								}
+							},
+							"required": [
+								"type"
+							],
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"type"
+					],
+					"additionalProperties": false
+				},
+				"components": {
+					"type": "object",
+					"properties": {
+						"v": {
+							"type": "boolean"
+						},
+						"s": {
+							"type": "boolean"
+						},
+						"m": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"text": {
+											"type": "string"
+										},
+										"cost": {
+											"description": "In copper pieces.",
+											"type": "number"
+										},
+										"consume": {
+											"oneOf": [
+												{
+													"type": "boolean"
+												},
+												{
+													"type": "string",
+													"const": "optional"
+												}
+											]
+										}
+									},
+									"required": [
+										"text"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": [
+										"boolean",
+										"string"
+									]
+								}
+							]
+						},
+						"r": {
+							"description": "\"Royalty\" components, as introduced in Acquisitions Incorporated",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"duration": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/duration"
+					}
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"entriesHigherLevel": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"classes": {
+					"type": "object",
+					"properties": {
+						"fromClassList": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/class"
+							}
+						},
+						"fromClassListVariant": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/class"
+							}
+						},
+						"fromSubclass": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"class": {
+										"$ref": "#/definitions/class"
+									},
+									"subclass": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"source": {
+												"type": "string"
+											},
+											"subSubclass": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"name",
+											"source"
+										],
+										"additionalProperties": false
+									}
+								},
+								"required": [
+									"class",
+									"subclass"
+								],
+								"additionalProperties": false
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"races": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string"
+							},
+							"baseName": {
+								"type": "string"
+							},
+							"baseSource": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"name",
+							"source"
+						]
+					}
+				},
+				"backgrounds": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"name",
+							"source"
+						]
+					}
+				},
+				"eldritchInvocations": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"name",
+							"source"
+						]
+					}
+				},
+				"source": {
+					"type": "string"
+				},
+				"page": {
+					"type": "integer"
+				},
+				"otherSources": {
+					"$ref": "util.json#/definitions/otherSources"
+				},
+				"damageInflict": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"acid",
+							"bludgeoning",
+							"cold",
+							"fire",
+							"force",
+							"lightning",
+							"necrotic",
+							"piercing",
+							"poison",
+							"psychic",
+							"radiant",
+							"slashing",
+							"thunder"
+						]
+					}
+				},
+				"damageResist": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"acid",
+							"bludgeoning",
+							"cold",
+							"fire",
+							"force",
+							"lightning",
+							"necrotic",
+							"piercing",
+							"poison",
+							"psychic",
+							"radiant",
+							"slashing",
+							"thunder"
+						]
+					}
+				},
+				"damageImmune": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"acid",
+							"bludgeoning",
+							"cold",
+							"fire",
+							"force",
+							"lightning",
+							"necrotic",
+							"piercing",
+							"poison",
+							"psychic",
+							"radiant",
+							"slashing",
+							"thunder"
+						]
+					}
+				},
+				"damageVulnerable": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"acid",
+							"bludgeoning",
+							"cold",
+							"fire",
+							"force",
+							"lightning",
+							"necrotic",
+							"piercing",
+							"poison",
+							"psychic",
+							"radiant",
+							"slashing",
+							"thunder"
+						]
+					}
+				},
+				"conditionInflict": {
+					"$ref": "util.json#/definitions/tagsConditions"
+				},
+				"savingThrow": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"constitution",
+							"charisma",
+							"dexterity",
+							"intelligence",
+							"strength",
+							"wisdom"
+						]
+					}
+				},
+				"abilityCheck": {
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"constitution",
+							"charisma",
+							"dexterity",
+							"intelligence",
+							"strength",
+							"wisdom"
+						]
+					}
+				},
+				"spellAttack": {
+					"type": "array",
+					"uniqueItems": true,
+					"description": "M: Melee\n R: Ranged\n O: Other/Unknown",
+					"items": {
+						"type": "string",
+						"enum": [
+							"M",
+							"R",
+							"O"
+						]
+					}
+				},
+				"areaTags": {
+					"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n C: Cube\n H: Hemisphere\n L: Line\n MT: Multiple Targets\n N: Cone\n Q: Square\n R: Circle\n ST: Single Target\n S: Sphere\n W: Wall\n Y: Cylinder",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"C",
+							"H",
+							"L",
+							"MT",
+							"N",
+							"Q",
+							"R",
+							"ST",
+							"S",
+							"W",
+							"Y"
+						]
+					}
+				},
+				"miscTags": {
+					"type": "array",
+					"description": " FMV: Forced Movement\n HL: Healing\n MAC: Modifies AC\n PRM: Permanent Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"FMV",
+							"HL",
+							"MAC",
+							"PRM",
+							"SCL",
+							"SMN",
+							"SGT",
+							"THP",
+							"TP"
+						]
+					}
+				},
+				"srd": {
+					"$ref": "util.json#/definitions/srd"
+				},
+				"scalingLevelDice": {
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/scalingLevelDiceItem"
+							}
+						},
+						{
+							"$ref": "#/definitions/scalingLevelDiceItem"
+						}
+					]
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
+			}
+		},
+		"spell": {
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"$ref": "#/definitions/spellData"
+						},
+						{
+							"required": [
+								"name",
+								"level",
+								"school",
+								"time",
+								"range",
+								"duration",
+								"entries",
+								"source"
+							]
+						}
+					]
+				},
+				{
+					"allOf": [
+						{
+							"$ref": "#/definitions/spellData"
+						},
+						{
+							"$ref": "util.json#/definitions/copyBlock"
+						}
+					]
+				}
+			]
+		},
+		"time": {
+			"type": "object",
+			"properties": {
+				"number": {
+					"type": "integer"
+				},
+				"unit": {
+					"type": "string"
+				},
+				"condition": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"unit"
+			],
+			"additionalProperties": false
+		},
+		"duration": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"enum": [
+						"instant",
+						"timed",
+						"permanent",
+						"special"
+					]
+				},
+				"duration": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"type": "string",
+							"enum": [
+								"turn",
+								"round",
+								"minute",
+								"hour",
+								"day",
+								"week",
+								"year"
+							]
+						},
+						"amount": {
+							"type": "integer"
+						},
+						"upTo": {
+							"type": "boolean"
+						}
+					},
+					"required": [
+						"type"
+					],
+					"additionalProperties": false
+				},
+				"concentration": {
+					"type": "boolean"
+				},
+				"ends": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"discharge",
+							"dispel",
+							"trigger"
+						]
+					}
+				},
+				"condition": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"type"
+			],
+			"additionalProperties": false
+		},
+		"class": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"definedInSource": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"scalingLevelDiceItem": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "string"
+				},
+				"scaling": {
+					"type": "object",
+					"patternProperties": {
+						"\\d+": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"spell": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/spell"
+			}
+		},
+		"_meta": {
+			"$ref": "util.json#/definitions/metaBlock"
+		}
+	},
+	"required": [
+		"spell"
+	]
+}

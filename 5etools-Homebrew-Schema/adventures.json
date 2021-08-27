@@ -1,0 +1,215 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "adventures.json",
+	"version": "1.1.4",
+	"type": "object",
+	"properties": {
+		"adventure": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string",
+						"description": "An ID that will be used to refer to this adventure in tags.\n Best practice is to make this different to the homebrew json abbreviation key."
+					},
+					"source": {
+						"type": "string"
+					},
+					"alAveragePlayerLevel": {
+						"description": "Adventurers League Average Player Level; for use in homebrew.",
+						"type": "integer"
+					},
+					"alLength": {
+						"description": "Adventurers League length (in hours); for use in homebrew.",
+						"type": "object",
+						"oneOf": [
+							{
+								"properties": {
+									"min": {
+										"type": "integer"
+									},
+									"max": {
+										"type": "integer"
+									}
+								}
+							},
+							{
+								"properties": {
+									"exact": {
+										"type": "integer"
+									}
+								}
+							}
+						]
+					},
+					"alId": {
+						"description": "Adventurers League ID; for use in homebrew.",
+						"type": "string"
+					},
+					"contents": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"headers": {
+									"type": "array",
+									"items": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"depth": {
+														"type": "integer"
+													},
+													"header": {
+														"type": "string"
+													},
+													"index": {
+														"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
+														"type": "integer"
+													}
+												},
+												"required": [
+													"header"
+												]
+											}
+										]
+									}
+								},
+								"ordinal": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string",
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level"
+											]
+										},
+										"identifier": {
+											"type": [
+												"integer",
+												"string"
+											]
+										}
+									},
+									"additionalProperties": false,
+									"required": [
+										"type",
+										"identifier"
+									]
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"name"
+							]
+						}
+					},
+					"level": {
+						"oneOf": [
+							{
+								"type": "object",
+								"properties": {
+									"start": {
+										"type": "integer"
+									},
+									"end": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"start",
+									"end"
+								]
+							},
+							{
+								"type": "object",
+								"properties": {
+									"custom": {
+										"type": "string"
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"custom"
+								]
+							}
+						]
+					},
+					"published": {
+						"type": "string",
+						"format": "date",
+						"description": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339)."
+					},
+					"publishedOrder": {
+						"description": "A sorting order for adventures within a single source.",
+						"type": "integer"
+					},
+					"coverUrl": {
+						"description": "A direct link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
+						"type": "string"
+					},
+					"storyline": {
+						"oneOf": [
+							{
+								"type": "string",
+								"enum": [
+									"Acquisitions Incorporated",
+									"Baldur's Gate",
+									"Candlekeep Mysteries",
+									"Eberron",
+									"Elemental Evil",
+									"Essentials Kit",
+									"Extra Life",
+									"Ghosts of Saltmarsh",
+									"Icewind Dale",
+									"Mythic Odysseys of Theros",
+									"Rage of Demons",
+									"Ravenloft",
+									"Ravnica",
+									"Rick and Morty",
+									"Starter Set",
+									"Storm King's Thunder",
+									"Stranger Things",
+									"Tales from the Yawning Portal",
+									"Tomb of Annihilation",
+									"Tyranny of Dragons",
+									"Waterdeep",
+									"Wildemount"
+								]
+							},
+							{
+								"type": "string"
+							}
+						]
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"name",
+					"id",
+					"source",
+					"contents",
+					"level",
+					"published",
+					"storyline"
+				]
+			}
+		}
+	}
+}
