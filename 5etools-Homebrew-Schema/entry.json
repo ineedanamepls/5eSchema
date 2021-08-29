@@ -572,7 +572,16 @@
 							"type": "integer"
 						},
 						"style": {
-							"type": "string"
+							"type": "string",
+							"description": "Formatting to be applied to the list;\n list-decimal: decimal numbering 1. 2. 3. etc \n list-hang: a list with the bullets removed and preserved spacing \n list-hang-notitle: a list with no indent or bullets\n list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n list-name: a bulleted list with all text in bold\n list-no-bullets: a list with the bullets removed and no spacing preservation",
+							"enum": [
+								"list-decimal",
+								"list-hang",
+								"list-hang-notitle",
+								"list-lower-roman",
+								"list-name",
+								"list-no-bullets"
+							]
 						},
 						"name": {
 							"type": "string"
