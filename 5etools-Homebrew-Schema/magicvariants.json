@@ -90,7 +90,12 @@
 								"type": "string"
 							},
 							"tier": {
-								"type": "string"
+								"type": "string",
+								"description": "Item Tier as per XGE p135",
+								"enum": [
+									"minor",
+									"major"
+								]
 							},
 							"rarity": {
 								"type": "string",
