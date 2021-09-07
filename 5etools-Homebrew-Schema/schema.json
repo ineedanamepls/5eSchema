@@ -49,7 +49,7 @@
 							"dateReleased": {
 								"type": "string",
 								"format": "date",
-								"description": "The release date of the source, e.g. \"2000-01-31\". Dates myst be specified in precisely this format, with two digits given for both month and day."
+								"description": "The date of release of the source, in the format YYYY-MM-DD (RFC3339)."
 							},
 							"version": {
 								"type": "string",
