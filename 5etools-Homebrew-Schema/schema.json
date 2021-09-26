@@ -437,6 +437,15 @@
 		},
 		"vehicle": {
 			"$ref": "vehicles.json#/properties/vehicle"
+		},
+		"action": {
+			"$ref": "actions.json#/properties/action"
+		},
+		"recipe": {
+			"$ref": "recipes.json#/properties/recipe"
+		},
+		"classFeature": {
+			"$ref": "class.json#/properties/classFeature"
 		}
 	},
 	"additionalProperties": false
