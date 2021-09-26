@@ -1,6 +1,6 @@
 # Important use instruction
 
-If you want to use homebrew features of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema. 
+If you want to use homebrew features of the schema, please do them last in each section you work with, that way you will get most out of the autocompletion for the non-homebrew specific features of the schema.
 
 Example with `optionalfeature`:
 
