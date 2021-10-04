@@ -4,6 +4,7 @@
 	"version": "1.2.1",
 	"title": "EncounterArray",
 	"type": "object",
+
 	"definitions": {
 		"encounterTableRow": {
 			"type": "object",
@@ -25,6 +26,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"encounterTable": {
 			"type": "object",
 			"properties": {
@@ -51,6 +53,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"encounter": {
 			"type": "object",
 			"properties": {
@@ -78,6 +81,7 @@
 			"additionalProperties": false
 		}
 	},
+
 	"properties": {
 		"encounter": {
 			"type": "array",
@@ -86,7 +90,6 @@
 			}
 		}
 	},
-	"required": [
-		"encounter"
-	]
+
+	"required": ["encounter"]
 }

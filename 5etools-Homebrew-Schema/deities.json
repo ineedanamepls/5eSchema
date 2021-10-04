@@ -3,6 +3,7 @@
 	"$id": "deities.json",
 	"version": "1.1.4",
 	"type": "object",
+
 	"definitions": {
 		"deityData": {
 			"type": "object",
@@ -18,13 +19,7 @@
 					"description": "L: Lawful\n N: Neutral\n C: Chaotic\n G: Good\n E: Evil",
 					"items": {
 						"type": "string",
-						"enum": [
-							"L",
-							"N",
-							"C",
-							"G",
-							"E"
-						]
+						"enum": ["L", "N", "C", "G", "E"]
 					}
 				},
 				"title": {
@@ -74,22 +69,7 @@
 							"items": {
 								"type": "string",
 								"enum": [
-									"Arcana",
-									"Death",
-									"Forge",
-									"Grave",
-									"Knowledge",
-									"Life",
-									"Light",
-									"Nature",
-									"None",
-									"Order",
-									"Peace",
-									"Tempest",
-									"Trickery",
-									"Twilight",
-									"Unknown",
-									"War"
+									"Arcana", "Death","Forge", "Grave", "Knowledge", "Life", "Light", "Nature", "None", "Order", "Peace", "Tempest", "Trickery", "Twilight", "Unknown", "War"
 								]
 							}
 						},
@@ -142,12 +122,11 @@
 				"customExtensionOf": {
 					"type": "string"
 				},
-				"piety": {
-					"type": "boolean"
-				}
+				"piety": {"type": "boolean"}
 			},
 			"additionalProperties": false
 		},
+
 		"deity": {
 			"anyOf": [
 				{
@@ -177,6 +156,7 @@
 			]
 		}
 	},
+
 	"properties": {
 		"deity": {
 			"type": "array",

@@ -4,17 +4,14 @@
 	"version": "1.0.2",
 	"title": "Character Creation Options",
 	"type": "object",
+
 	"definitions": {
 		"optionType": {
 			"type": "string",
 			"description": "DG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
-			"enum": [
-				"DG",
-				"OF",
-				"RF:B",
-				"SG"
-			]
+			"enum": ["DG", "OF", "RF:B", "SG"]
 		},
+
 		"charoption": {
 			"type": "object",
 			"properties": {
@@ -52,12 +49,8 @@
 				"srd": {
 					"$ref": "util.json#/definitions/srd"
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
 			"required": [
 				"name",
@@ -68,12 +61,11 @@
 			"additionalProperties": false
 		}
 	},
+
 	"properties": {
 		"charoption": {
 			"type": "array",
-			"items": {
-				"$ref": "#/definitions/charoption"
-			}
+			"items": {"$ref": "#/definitions/charoption"}
 		}
 	}
 }

@@ -109,23 +109,7 @@
 						"description": "2H: Two-Handed\n A: Ammunition\n AF: Ammunition (futuristic)\n BF: Burst Fire\n EM: Eldritch Machine\n F: Finesse\n H: Heavy\n L: Light\n LD: Loading\n OTH: Other\n R: Reach\n RLD: Reload\n S: Special\n T: Thrown\n V: Versatile",
 						"items": {
 							"type": "string",
-							"enum": [
-								"2H",
-								"A",
-								"AF",
-								"BF",
-								"EM",
-								"F",
-								"H",
-								"L",
-								"LD",
-								"OTH",
-								"R",
-								"RLD",
-								"S",
-								"T",
-								"V"
-							]
+							"enum": ["2H", "A", "AF", "BF", "EM", "F", "H", "L", "LD", "OTH", "R", "RLD", "S", "T", "V"]
 						}
 					},
 					"range": {
@@ -230,9 +214,7 @@
 										}
 									},
 									"additionalProperties": false,
-									"required": [
-										"special"
-									]
+									"required": ["special"]
 								},
 								{
 									"type": "object",
@@ -245,20 +227,13 @@
 										}
 									},
 									"additionalProperties": false,
-									"required": [
-										"item",
-										"quantity"
-									]
+									"required": ["item", "quantity"]
 								}
 							]
 						}
 					},
-					"hasFluff": {
-						"type": "boolean"
-					},
-					"hasFluffImages": {
-						"type": "boolean"
-					}
+					"hasFluff": {"type": "boolean"},
+					"hasFluffImages": {"type": "boolean"}
 				},
 				"required": [
 					"name",
@@ -281,17 +256,11 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"name": {
-						"type": "string"
-					},
-					"source": {
-						"type": "string"
-					},
+					"name": {"type": "string"},
+					"source": {"type": "string"},
 					"entriesTemplate": {
 						"type": "array",
-						"items": {
-							"$ref": "entry.json"
-						}
+						"items": {"$ref": "entry.json"}
 					}
 				}
 			}

@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "1.16.6",
+	"version": "1.16.8",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -39,9 +39,7 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": [
-						"alignment"
-					]
+					"required": ["alignment"]
 				},
 				{
 					"type": "object",
@@ -51,9 +49,7 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": [
-						"special"
-					]
+					"required": ["special"]
 				}
 			]
 		},
@@ -78,9 +74,7 @@
 							"type": "boolean"
 						}
 					},
-					"required": [
-						"ac"
-					],
+					"required": ["ac"],
 					"additionalProperties": false
 				},
 				{
@@ -90,9 +84,7 @@
 							"type": "string"
 						}
 					},
-					"required": [
-						"special"
-					],
+					"required": ["special"],
 					"additionalProperties": false
 				},
 				{
@@ -100,7 +92,8 @@
 				}
 			]
 		},
-		"creatureData": {
+
+		"creatureData":  {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -126,10 +119,7 @@
 				},
 				"group": {
 					"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything",
-					"type": [
-						"string",
-						"null"
-					]
+					"type": ["string", "null"]
 				},
 				"level": {
 					"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
@@ -232,6 +222,7 @@
 						"$ref": "#/definitions/align"
 					}
 				},
+				"alignmentPrefix": {"type": "string"},
 				"ac": {
 					"type": "array",
 					"items": {
@@ -268,85 +259,49 @@
 				},
 				"str": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"dex": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"con": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"int": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"wis": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"cha": {
 					"oneOf": [
-						{
-							"type": "integer"
-						},
-						{
-							"type": "null"
-						}
+						{"type": "integer"},
+						{"type": "null"}
 					]
 				},
 				"save": {
 					"type": "object",
 					"properties": {
-						"str": {
-							"type": "string"
-						},
-						"dex": {
-							"type": "string"
-						},
-						"con": {
-							"type": "string"
-						},
-						"int": {
-							"type": "string"
-						},
-						"wis": {
-							"type": "string"
-						},
-						"cha": {
-							"type": "string"
-						},
+						"str": {"type": "string"},
+						"dex": {"type": "string"},
+						"con": {"type": "string"},
+						"int": {"type": "string"},
+						"wis": {"type": "string"},
+						"cha": {"type": "string"},
 						"special": {
 							"description": "For use in homebrew.",
 							"$ref": "entry.json"
@@ -419,60 +374,24 @@
 									"oneOf": {
 										"type": "object",
 										"properties": {
-											"acrobatics": {
-												"type": "string"
-											},
-											"animal handling": {
-												"type": "string"
-											},
-											"arcana": {
-												"type": "string"
-											},
-											"athletics": {
-												"type": "string"
-											},
-											"deception": {
-												"type": "string"
-											},
-											"history": {
-												"type": "string"
-											},
-											"insight": {
-												"type": "string"
-											},
-											"intimidation": {
-												"type": "string"
-											},
-											"investigation": {
-												"type": "string"
-											},
-											"medicine": {
-												"type": "string"
-											},
-											"nature": {
-												"type": "string"
-											},
-											"perception": {
-												"type": "string"
-											},
-											"performance": {
-												"type": "string"
-											},
-											"persuasion": {
-												"type": "string"
-											},
-											"religion": {
-												"type": "string"
-											},
-											"sleight of hand": {
-												"type": "string"
-											},
-											"stealth": {
-												"type": "string"
-											},
-											"survival": {
-												"type": "string"
-											}
+											"acrobatics": {"type": "string"},
+											"animal handling": {"type": "string"},
+											"arcana": {"type": "string"},
+											"athletics": {"type": "string"},
+											"deception": {"type": "string"},
+											"history": {"type": "string"},
+											"insight": {"type": "string"},
+											"intimidation": {"type": "string"},
+											"investigation": {"type": "string"},
+											"medicine": {"type": "string"},
+											"nature": {"type": "string"},
+											"perception": {"type": "string"},
+											"performance": {"type": "string"},
+											"persuasion": {"type": "string"},
+											"religion": {"type": "string"},
+											"sleight of hand": {"type": "string"},
+											"stealth": {"type": "string"},
+											"survival": {"type": "string"}
 										}
 									}
 								}
@@ -546,9 +465,7 @@
 								}
 							},
 							"additionalProperties": false,
-							"required": [
-								"cr"
-							]
+							"required": ["cr"]
 						}
 					]
 				},
@@ -595,10 +512,7 @@
 									},
 									"type": {
 										"type": "string",
-										"enum": [
-											"entries",
-											"inset"
-										]
+										"enum": ["entries", "inset"]
 									},
 									"sort": {
 										"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
@@ -798,10 +712,7 @@
 										"type": "integer"
 									}
 								},
-								"required": [
-									"name",
-									"source"
-								]
+								"required": ["name", "source"]
 							},
 							"variantSource": {
 								"type": "object",
@@ -848,10 +759,7 @@
 								"type": "integer"
 							}
 						},
-						"required": [
-							"name",
-							"source"
-						]
+						"required": ["name", "source"]
 					}
 				},
 				"fluff": {
@@ -925,16 +833,7 @@
 					"type": "string",
 					"description": "B: Black\n U: Blue\n A: Brass\n Z: Bronze\n C: Copper\n O: Gold\n G: Green\n R: Red\n S: Silver\n W: White",
 					"enum": [
-						"A",
-						"B",
-						"C",
-						"G",
-						"O",
-						"R",
-						"S",
-						"U",
-						"W",
-						"Z"
+						"A", "B", "C", "G", "O", "R", "S", "U", "W", "Z"
 					]
 				},
 				"traitTags": {
@@ -1002,40 +901,11 @@
 				},
 				"languageTags": {
 					"type": "array",
-					"description": "",
 					"items": {
 						"type": "string",
 						"description": "AB: Abyssal\n AQ: Aquan\n AU: Auran\n C: Common\n CE: Celestial\n CS: Can't Speak Known Languages\n D: Dwarvish\n DR: Draconic\n DS: Deep Speech\n DU: Druidic\n E: Elvish\n G: Gnomish\n GI: Giant\n GO: Goblin\n GTH: Gith\n H: Halfling\n I: Infernal\n IG: Ignan\n LF: Languages Known in Life\n O: Orc\n OTH: Other\n P: Primordial\n S: Sylvan\n T: Terran\n TC: Thieves' cant\n TP: Telepathy\n U: Undercommon\n X: Any (Choose)\n XX: All",
 						"enum": [
-							"AB",
-							"AQ",
-							"AU",
-							"C",
-							"CE",
-							"CS",
-							"D",
-							"DR",
-							"DS",
-							"DU",
-							"E",
-							"G",
-							"GI",
-							"GO",
-							"GTH",
-							"H",
-							"I",
-							"IG",
-							"LF",
-							"O",
-							"OTH",
-							"P",
-							"S",
-							"T",
-							"TC",
-							"TP",
-							"U",
-							"X",
-							"XX"
+							"AB", "AQ", "AU", "C", "CE", "CS", "D", "DR", "DS", "DU", "E", "G", "GI", "GO", "GTH", "H", "I", "IG", "LF", "O", "OTH", "P", "S", "T", "TC", "TP", "U", "X", "XX"
 						]
 					}
 				},
@@ -1044,13 +914,7 @@
 					"items": {
 						"type": "string",
 						"description": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight",
-						"enum": [
-							"B",
-							"D",
-							"SD",
-							"T",
-							"U"
-						]
+						"enum": ["B", "D", "SD", "T", "U"]
 					}
 				},
 				"spellcastingTags": {
@@ -1058,21 +922,7 @@
 					"items": {
 						"type": "string",
 						"description": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard",
-						"enum": [
-							"P",
-							"I",
-							"F",
-							"S",
-							"CA",
-							"CB",
-							"CC",
-							"CD",
-							"CP",
-							"CR",
-							"CS",
-							"CL",
-							"CW"
-						]
+						"enum": ["P", "I", "F", "S", "CA", "CB", "CC", "CD", "CP", "CR", "CS", "CL", "CW"]
 					}
 				},
 				"damageTags": {
@@ -1080,21 +930,7 @@
 					"items": {
 						"type": "string",
 						"description": "A: Acid\n B: Bludgeoning\n C: Cold\n F: Fire\n O: Force\n L: Lightning\n N: Necrotic\n P: Piercing\n I: Poison\n Y: Psychic\n R: Radiant\n S: Slashing\n T: Thunder",
-						"enum": [
-							"A",
-							"B",
-							"C",
-							"F",
-							"O",
-							"L",
-							"N",
-							"P",
-							"I",
-							"Y",
-							"R",
-							"S",
-							"T"
-						]
+						"enum": ["A", "B", "C", "F", "O", "L", "N", "P", "I", "Y", "R", "S", "T"]
 					}
 				},
 				"miscTags": {
@@ -1102,14 +938,7 @@
 					"items": {
 						"type": "string",
 						"description": "AOE: Has Areas of Effect\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
-						"enum": [
-							"AOE",
-							"MW",
-							"RW",
-							"RCH",
-							"RNG",
-							"THW"
-						]
+						"enum": ["AOE", "MW", "RW", "RCH", "RNG", "THW"]
 					}
 				},
 				"conditionInflict": {
@@ -1135,18 +964,19 @@
 					"description": "The spell used to summon this creature; specifically for TCE-esque summon spells.",
 					"type": "string"
 				},
+				"summonedByClass": {
+					"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
+					"type": "string"
+				},
 				"_isCopy": {
 					"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
 					"type": "boolean"
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			}
 		},
+
 		"creature": {
 			"anyOf": [
 				{

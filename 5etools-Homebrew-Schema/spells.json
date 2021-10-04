@@ -4,6 +4,7 @@
 	"version": "1.6.5",
 	"title": "Spells",
 	"type": "object",
+
 	"definitions": {
 		"spellData": {
 			"type": "object",
@@ -155,12 +156,10 @@
 										"text"
 									],
 									"additionalProperties": false
+
 								},
 								{
-									"type": [
-										"boolean",
-										"string"
-									]
+									"type": ["boolean", "string"]
 								}
 							]
 						},
@@ -173,9 +172,7 @@
 				},
 				"duration": {
 					"type": "array",
-					"items": {
-						"$ref": "#/definitions/duration"
-					}
+					"items": {"$ref": "#/definitions/duration"}
 				},
 				"entries": {
 					"type": "array",
@@ -260,10 +257,7 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"name",
-							"source"
-						]
+						"required": ["name", "source"]
 					}
 				},
 				"backgrounds": {
@@ -278,10 +272,7 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"name",
-							"source"
-						]
+						"required": ["name", "source"]
 					}
 				},
 				"eldritchInvocations": {
@@ -296,10 +287,7 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"name",
-							"source"
-						]
+						"required": ["name", "source"]
 					}
 				},
 				"source": {
@@ -317,19 +305,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"acid",
-							"bludgeoning",
-							"cold",
-							"fire",
-							"force",
-							"lightning",
-							"necrotic",
-							"piercing",
-							"poison",
-							"psychic",
-							"radiant",
-							"slashing",
-							"thunder"
+							"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 						]
 					}
 				},
@@ -339,19 +315,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"acid",
-							"bludgeoning",
-							"cold",
-							"fire",
-							"force",
-							"lightning",
-							"necrotic",
-							"piercing",
-							"poison",
-							"psychic",
-							"radiant",
-							"slashing",
-							"thunder"
+							"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 						]
 					}
 				},
@@ -361,19 +325,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"acid",
-							"bludgeoning",
-							"cold",
-							"fire",
-							"force",
-							"lightning",
-							"necrotic",
-							"piercing",
-							"poison",
-							"psychic",
-							"radiant",
-							"slashing",
-							"thunder"
+							"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 						]
 					}
 				},
@@ -383,19 +335,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"acid",
-							"bludgeoning",
-							"cold",
-							"fire",
-							"force",
-							"lightning",
-							"necrotic",
-							"piercing",
-							"poison",
-							"psychic",
-							"radiant",
-							"slashing",
-							"thunder"
+							"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic", "piercing", "poison", "psychic", "radiant", "slashing", "thunder"
 						]
 					}
 				},
@@ -408,12 +348,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"constitution",
-							"charisma",
-							"dexterity",
-							"intelligence",
-							"strength",
-							"wisdom"
+							"strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"
 						]
 					}
 				},
@@ -423,12 +358,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"constitution",
-							"charisma",
-							"dexterity",
-							"intelligence",
-							"strength",
-							"wisdom"
+							"strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"
 						]
 					}
 				},
@@ -439,9 +369,7 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"M",
-							"R",
-							"O"
+							"M", "R", "O"
 						]
 					}
 				},
@@ -451,19 +379,7 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "string",
-						"enum": [
-							"C",
-							"H",
-							"L",
-							"MT",
-							"N",
-							"Q",
-							"R",
-							"ST",
-							"S",
-							"W",
-							"Y"
-						]
+						"enum": ["C", "H", "L", "MT", "N", "Q", "R", "ST", "S", "W", "Y"]
 					}
 				},
 				"miscTags": {
@@ -472,17 +388,7 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "string",
-						"enum": [
-							"FMV",
-							"HL",
-							"MAC",
-							"PRM",
-							"SCL",
-							"SMN",
-							"SGT",
-							"THP",
-							"TP"
-						]
+						"enum": ["FMV", "HL", "MAC", "PRM", "SCL", "SMN", "SGT", "THP", "TP"]
 					}
 				},
 				"srd": {
@@ -501,14 +407,11 @@
 						}
 					]
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			}
 		},
+
 		"spell": {
 			"anyOf": [
 				{
@@ -542,6 +445,7 @@
 				}
 			]
 		},
+
 		"time": {
 			"type": "object",
 			"properties": {
@@ -560,6 +464,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"duration": {
 			"type": "object",
 			"properties": {
@@ -606,11 +511,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"discharge",
-							"dispel",
-							"trigger"
-						]
+						"enum": ["discharge", "dispel","trigger"]
 					}
 				},
 				"condition": {
@@ -622,6 +523,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"class": {
 			"type": "object",
 			"properties": {
@@ -641,6 +543,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"scalingLevelDiceItem": {
 			"type": "object",
 			"properties": {
@@ -660,12 +563,11 @@
 			"additionalProperties": false
 		}
 	},
+
 	"properties": {
 		"spell": {
 			"type": "array",
-			"items": {
-				"$ref": "#/definitions/spell"
-			}
+			"items": {"$ref": "#/definitions/spell"}
 		},
 		"_meta": {
 			"$ref": "util.json#/definitions/metaBlock"

@@ -3,6 +3,7 @@
 	"$id": "languages.json",
 	"version": "1.1.1",
 	"type": "object",
+
 	"properties": {
 		"language": {
 			"type": "array",
@@ -38,11 +39,7 @@
 					},
 					"type": {
 						"type": "string",
-						"enum": [
-							"standard",
-							"exotic",
-							"secret"
-						]
+						"enum": ["standard", "exotic", "secret"]
 					},
 					"additionalSources": {
 						"$ref": "util.json#/definitions/additionalSources"
@@ -60,12 +57,8 @@
 							"type": "string"
 						}
 					},
-					"hasFluff": {
-						"type": "boolean"
-					},
-					"hasFluffImages": {
-						"type": "boolean"
-					}
+					"hasFluff": {"type": "boolean"},
+					"hasFluffImages": {"type": "boolean"}
 				},
 				"required": [
 					"name",
@@ -75,25 +68,19 @@
 				"additionalProperties": false
 			}
 		},
+
 		"languageScript": {
 			"type": "array",
 			"items": {
 				"type": "object",
 				"properties": {
-					"name": {
-						"type": "string"
-					},
+					"name": {"type": "string"},
 					"fonts": {
 						"type": "array",
-						"items": {
-							"type": "string"
-						}
+						"items": {"type": "string"}
 					}
 				},
-				"required": [
-					"name",
-					"fonts"
-				],
+				"required": ["name", "fonts"],
 				"additionalProperties": false
 			}
 		}

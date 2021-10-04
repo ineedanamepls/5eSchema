@@ -3,18 +3,15 @@
 	"$id": "variantrules.json",
 	"version": "1.1.0",
 	"title": "RulesArray",
+
 	"type": "object",
 	"properties": {
 		"variantrule": {
 			"type": "array",
-			"items": {
-				"$ref": "#/definitions/variantrule"
-			}
+			"items": {"$ref": "#/definitions/variantrule"}
 		}
 	},
-	"required": [
-		"variantrule"
-	],
+	"required": ["variantrule"],
 	"definitions": {
 		"variantrule": {
 			"type": "object",
@@ -40,12 +37,7 @@
 				"ruleType": {
 					"description": "O: Optional\n V: Variant\n VO: Variant Optional\n VV: Variant Variant",
 					"type": "string",
-					"enum": [
-						"O",
-						"V",
-						"VO",
-						"VV"
-					]
+					"enum": ["O", "V", "VO", "VV"]
 				},
 				"srd": {
 					"$ref": "util.json#/definitions/srd"

@@ -3,6 +3,7 @@
 	"$id": "fluff-races.json",
 	"version": "2.1.0",
 	"type": "object",
+
 	"definitions": {
 		"raceFluffData": {
 			"type": "object",
@@ -41,6 +42,7 @@
 			},
 			"additionalProperties": false
 		},
+
 		"raceFluff": {
 			"anyOf": [
 				{
@@ -49,10 +51,7 @@
 							"$ref": "#/definitions/raceFluffData"
 						},
 						{
-							"required": [
-								"name",
-								"source"
-							]
+							"required": ["name", "source"]
 						}
 					]
 				},
@@ -70,6 +69,7 @@
 			]
 		}
 	},
+
 	"properties": {
 		"raceFluff": {
 			"type": "array",

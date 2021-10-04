@@ -4,16 +4,17 @@
 	"version": "1.10.0",
 	"title": "Optional Features",
 	"type": "object",
+
 	"definitions": {
 		"prerequisite": {
 			"$ref": "util.json#/definitions/prerequisite"
 		},
+
 		"featureType": {
 			"type": "array",
-			"items": {
-				"$ref": "util.json#/definitions/dataOptionalfeatureType"
-			}
+			"items": {"$ref": "util.json#/definitions/dataOptionalfeatureType"}
 		},
+
 		"optionalfeature": {
 			"type": "object",
 			"properties": {
@@ -39,10 +40,7 @@
 							"type": "string"
 						}
 					},
-					"required": [
-						"name",
-						"source"
-					],
+					"required": ["name", "source"],
 					"additionalProperties": false
 				},
 				"source": {
@@ -107,6 +105,12 @@
 				},
 				"toolProficiencies": {
 					"$ref": "util.json#/definitions/toolProficiencies"
+				},
+				"skillToolLanguageProficiencies": {
+					"$ref": "util.json#/definitions/skillToolLanguageProficiencies"
+				},
+				"proficiencyTags": {
+					"$ref": "util.json#/definitions/proficiencyTags"
 				}
 			},
 			"required": [
@@ -118,12 +122,11 @@
 			"additionalProperties": false
 		}
 	},
+
 	"properties": {
 		"optionalfeature": {
 			"type": "array",
-			"items": {
-				"$ref": "#/definitions/optionalfeature"
-			}
+			"items": {"$ref": "#/definitions/optionalfeature"}
 		}
 	}
 }
