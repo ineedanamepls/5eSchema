@@ -446,6 +446,12 @@
 		},
 		"classFeature": {
 			"$ref": "class.json#/properties/classFeature"
+		},
+		"cult": {
+			"$ref": "cultsboons.json#/properties/cult"
+		},
+		"boon": {
+			"$ref": "cultsboons.json#/properties/boon"
 		}
 	},
 	"additionalProperties": false
