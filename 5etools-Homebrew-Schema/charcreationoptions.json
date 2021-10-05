@@ -7,9 +7,16 @@
 
 	"definitions": {
 		"optionType": {
-			"type": "string",
-			"description": "DG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
-			"enum": ["DG", "OF", "RF:B", "SG"]
+			"anyOf": [
+				{
+					"type": "string",
+					"description": "DG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
+					"enum": ["DG", "OF", "RF:B", "SG"]
+				},
+				{
+					"type": "string"
+				}
+			]
 		},
 
 		"charoption": {

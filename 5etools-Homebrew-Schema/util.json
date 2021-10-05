@@ -857,13 +857,27 @@
 						]
 					},
 					"pact": {
-						"type": "string",
-						"enum": ["Blade", "Chain", "Tome", "Talisman"]
+						"anyOf": [
+							{
+								"type": "string",
+								"enum": ["Blade", "Chain", "Tome", "Talisman"]
+							},
+							{
+								"type": "string"
+							}
+						]
 					},
 					"patron": {
-						"type": "string",
-						"enum": [
-							"The Archfey", "The Fiend", "The Great Old One", "The Hexblade", "The Raven Queen", "The Seeker"
+						"anyOf": [
+							{
+								"type": "string",
+								"enum": [
+									"The Archfey", "The Fiend", "The Great Old One", "The Hexblade", "The Raven Queen", "The Seeker"
+								]
+							},
+							{
+								"type": "string"
+							}
 						]
 					},
 					"spell": {

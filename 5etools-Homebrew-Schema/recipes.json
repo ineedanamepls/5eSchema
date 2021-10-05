@@ -66,8 +66,15 @@
 					}
 				},
 				"type": {
-					"type": "string",
-					"enum": ["Dwarven", "Elven","Elixir/Ale", "Human", "Halfling", "Uncommon Cuisine"]
+					"anyOf": [
+						{
+							"type": "string",
+							"enum": ["Dwarven", "Elven","Elixir/Ale", "Human", "Halfling", "Uncommon Cuisine"]
+						},
+						{
+							"type": "string"
+						}
+					]
 				},
 				"diet": {
 					"type": "string",

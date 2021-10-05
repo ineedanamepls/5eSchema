@@ -452,6 +452,9 @@
 		},
 		"boon": {
 			"$ref": "cultsboons.json#/properties/boon"
+		},
+		"charoption": {
+			"$ref": "charcreationoptions.json#/properties/charoption"
 		}
 	},
 	"additionalProperties": false
