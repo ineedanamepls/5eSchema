@@ -1,8 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "races.json",
-	"version": "1.7.0",
+	"version": "1.8.3",
 	"type": "object",
+
 	"definitions": {
 		"subraceData": {
 			"type": "object",
@@ -61,6 +62,15 @@
 				},
 				"skillProficiencies": {
 					"$ref": "util.json#/definitions/skillProficiencies"
+				},
+				"toolProficiencies": {
+					"$ref": "util.json#/definitions/toolProficiencies"
+				},
+				"skillToolLanguageProficiencies": {
+					"$ref": "util.json#/definitions/skillToolLanguageProficiencies"
+				},
+				"expertise": {
+					"$ref": "util.json#/definitions/expertise"
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/definitions/weaponProficiencies"
@@ -135,15 +145,13 @@
 						}
 					]
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"age": {"$ref": "#/definitions/age"},
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
 			"additionalProperties": false
 		},
+
 		"raceData": {
 			"type": "object",
 			"properties": {
@@ -179,11 +187,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"M",
-							"S",
-							"V"
-						]
+						"enum": ["M", "S", "V"]
 					}
 				},
 				"entries": {
@@ -225,6 +229,15 @@
 				},
 				"skillProficiencies": {
 					"$ref": "util.json#/definitions/skillProficiencies"
+				},
+				"toolProficiencies": {
+					"$ref": "util.json#/definitions/toolProficiencies"
+				},
+				"skillToolLanguageProficiencies": {
+					"$ref": "util.json#/definitions/skillToolLanguageProficiencies"
+				},
+				"expertise": {
+					"$ref": "util.json#/definitions/expertise"
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/definitions/weaponProficiencies"
@@ -299,11 +312,7 @@
 					"$ref": "util.json#/definitions/conditionImmunityArrayPlayer"
 				},
 				"lineage": {
-					"type": "string",
-					"enum": [
-						"UA1",
-						"VRGR"
-					]
+					"$ref": "#/definitions/lineage"
 				},
 				"creatureTypes": {
 					"type": "array",
@@ -319,9 +328,7 @@
 										}
 									}
 								},
-								"required": [
-									"choose"
-								],
+								"required": ["choose"],
 								"additionalProperties": false
 							},
 							{
@@ -330,42 +337,38 @@
 						]
 					}
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"age": {"$ref": "#/definitions/age"},
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
 			"additionalProperties": false
 		},
+
 		"traitTag": {
-			"type": "string",
-			"enum": [
-				"Amphibious",
-				"Blindsight",
-				"Condition Immunity",
-				"Damage Immunity",
-				"Damage Resistance",
-				"Darkvision",
-				"Dragonmark",
-				"Feat",
-				"Improved Resting",
-				"Magic Resistance",
-				"Monstrous Race",
-				"Natural Armor",
-				"NPC Race",
-				"Powerful Build",
-				"Skill Proficiency",
-				"Spellcasting",
-				"Sunlight Sensitivity",
-				"Superior Darkvision",
-				"Tool Proficiency",
-				"Unarmed Strike",
-				"Uncommon Race",
-				"Weapon Proficiency"
+			"oneOf": [
+				{
+					"$ref": "util.json#/definitions/proficiencyTag"
+				},
+				{
+					"type": "string",
+					"enum": [
+						"Amphibious",
+						"Blindsight",
+						"Dragonmark",
+						"Improved Resting",
+						"Magic Resistance",
+						"Monstrous Race",
+						"Natural Armor",
+						"NPC Race",
+						"Powerful Build",
+						"Sunlight Sensitivity",
+						"Unarmed Strike",
+						"Uncommon Race"
+					]
+				}
 			]
 		},
+
 		"abilityScores": {
 			"type": "array",
 			"items": {
@@ -395,14 +398,7 @@
 							"from": {
 								"type": "array",
 								"items": {
-									"enum": [
-										"con",
-										"cha",
-										"dex",
-										"int",
-										"str",
-										"wis"
-									]
+									"enum": ["str", "dex", "con", "int", "wis", "cha"]
 								},
 								"uniqueItems": true
 							},
@@ -418,14 +414,7 @@
 									"from": {
 										"type": "array",
 										"items": {
-											"enum": [
-												"con",
-												"cha",
-												"dex",
-												"int",
-												"str",
-												"wis"
-											]
+											"enum": ["str", "dex", "con", "int", "wis", "cha"]
 										},
 										"uniqueItems": true
 									},
@@ -442,21 +431,14 @@
 				}
 			}
 		},
+
 		"heightAndWeight": {
 			"type": "object",
 			"properties": {
-				"baseHeight": {
-					"type": "integer"
-				},
-				"heightMod": {
-					"type": "string"
-				},
-				"baseWeight": {
-					"type": "integer"
-				},
-				"weightMod": {
-					"type": "string"
-				}
+				"baseHeight":  {"type": "integer"},
+				"heightMod": {"type": "string"},
+				"baseWeight":  {"type": "integer"},
+				"weightMod": {"type": "string"}
 			},
 			"required": [
 				"baseHeight",
@@ -465,6 +447,30 @@
 			],
 			"additionalProperties": false
 		},
+
+		"lineage": {
+			"oneOf": [
+				{
+					"description": "For lineages that should be filterable using the \"Lineage\" filter, but should not have any modifications applied.",
+					"type": "boolean",
+					"const": true
+				},
+				{
+					"description": "For lineages which modify the race with e.g. specific ability score modes.",
+					"type": "string",
+					"enum": ["UA1", "VRGR"]
+				}
+			]
+		},
+
+		"age": {
+			"type": "object",
+			"properties": {
+				"mature": {"type": "integer"},
+				"max": {"type": "integer"}
+			}
+		},
+
 		"race": {
 			"anyOf": [
 				{
@@ -493,6 +499,7 @@
 			]
 		}
 	},
+
 	"properties": {
 		"race": {
 			"type": "array",

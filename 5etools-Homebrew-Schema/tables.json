@@ -18,6 +18,9 @@
 					"page": {
 						"type": "integer"
 					},
+					"otherSources": {
+						"$ref": "util.json#/definitions/otherSources"
+					},
 					"chapter": {
 						"type": "object",
 						"properties": {
@@ -29,18 +32,10 @@
 								"properties": {
 									"type": {
 										"type": "string",
-										"enum": [
-											"chapter",
-											"appendix",
-											"part",
-											"episode"
-										]
+										"enum": ["chapter", "appendix", "part", "episode"]
 									},
 									"identifier": {
-										"type": [
-											"integer",
-											"string"
-										]
+										"type": ["integer", "string"]
 									}
 								},
 								"additionalProperties": false,
@@ -117,11 +112,7 @@
 						"type": "object"
 					}
 				},
-				"required": [
-					"name",
-					"source",
-					"rows"
-				],
+				"required": ["name", "source", "rows"],
 				"additionalProperties": false
 			}
 		}

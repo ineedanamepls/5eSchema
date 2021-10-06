@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "adventures.json",
-	"version": "1.1.4",
+	"version": "1.1.6",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -29,19 +29,13 @@
 						"oneOf": [
 							{
 								"properties": {
-									"min": {
-										"type": "integer"
-									},
-									"max": {
-										"type": "integer"
-									}
+									"min": {"type": "integer"},
+									"max": {"type": "integer"}
 								}
 							},
 							{
 								"properties": {
-									"exact": {
-										"type": "integer"
-									}
+									"exact": {"type": "integer"}
 								}
 							}
 						]
@@ -91,19 +85,10 @@
 									"properties": {
 										"type": {
 											"type": "string",
-											"enum": [
-												"chapter",
-												"appendix",
-												"part",
-												"episode",
-												"level"
-											]
+											"enum": ["chapter", "appendix", "part", "episode", "level"]
 										},
 										"identifier": {
-											"type": [
-												"integer",
-												"string"
-											]
+											"type": ["integer", "string"]
 										}
 									},
 									"additionalProperties": false,
@@ -170,6 +155,7 @@
 								"type": "string",
 								"enum": [
 									"Acquisitions Incorporated",
+									"Adventures in the Forgotten Realms",
 									"Baldur's Gate",
 									"Candlekeep Mysteries",
 									"Eberron",
@@ -187,6 +173,7 @@
 									"Storm King's Thunder",
 									"Stranger Things",
 									"Tales from the Yawning Portal",
+									"The Wild Beyond the Witchlight",
 									"Tomb of Annihilation",
 									"Tyranny of Dragons",
 									"Waterdeep",

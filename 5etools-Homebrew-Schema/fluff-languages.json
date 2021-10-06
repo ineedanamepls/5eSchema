@@ -28,10 +28,7 @@
 						}
 					}
 				},
-				"required": [
-					"name",
-					"source"
-				],
+				"required": ["name", "source"],
 				"additionalProperties": false
 			}
 		}

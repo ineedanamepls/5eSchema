@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "magicvariants.json",
-	"version": "1.4.3",
+	"version": "1.4.5",
 	"type": "object",
 	"properties": {
 		"variant": {
@@ -27,36 +27,17 @@
 						"items": {
 							"type": "object",
 							"properties": {
-								"ammunition": {
-									"type": "boolean"
-								},
-								"armor": {
-									"type": "boolean"
-								},
-								"axe": {
-									"type": "boolean"
-								},
-								"sword": {
-									"type": "boolean"
-								},
-								"weapon": {
-									"type": "boolean"
-								},
-								"dmgType": {
-									"type": "string"
-								},
-								"name": {
-									"type": "string"
-								},
-								"type": {
-									"type": "string"
-								},
-								"scfType": {
-									"type": "string"
-								},
-								"net": {
-									"type": "boolean"
-								}
+								"ammunition": {"type": "boolean"},
+								"armor": {"type": "boolean"},
+								"axe": {"type": "boolean"},
+								"sword": {"type": "boolean"},
+								"weapon": {"type": "boolean"},
+								"dmgType": {"type": "string"},
+								"name": {"type": "string"},
+								"source": {"type": "string"},
+								"type": {"type": "string"},
+								"scfType": {"type": "string"},
+								"net": {"type": "boolean"}
 							},
 							"additionalProperties": false
 						}
@@ -89,13 +70,13 @@
 							"bonusAbilityCheck": {
 								"type": "string"
 							},
+							"modifySpeed": {
+								"$ref": "util.json#/definitions/itemModifySpeed"
+							},
 							"tier": {
 								"type": "string",
 								"description": "Item Tier as per XGE p135",
-								"enum": [
-									"minor",
-									"major"
-								]
+								"enum": ["minor", "major"]
 							},
 							"rarity": {
 								"type": "string",
@@ -157,10 +138,7 @@
 								"type": "boolean"
 							},
 							"strength": {
-								"type": [
-									"string",
-									"null"
-								]
+								"type": ["string", "null"]
 							},
 							"wondrous": {
 								"type": "boolean"
@@ -172,10 +150,7 @@
 								}
 							},
 							"charges": {
-								"type": [
-									"string",
-									"integer"
-								]
+								"type": ["string", "integer"]
 							},
 							"attachedSpells": {
 								"type": "array",
@@ -233,9 +208,7 @@
 							"reqAttuneAltTags": {
 								"$ref": "util.json#/definitions/reqAttuneTags"
 							},
-							"hasRefs": {
-								"type": "boolean"
-							}
+							"hasRefs": {"type": "boolean"}
 						},
 						"required": [
 							"rarity",
@@ -276,10 +249,7 @@
 						"type": "boolean"
 					},
 					"charges": {
-						"type": [
-							"string",
-							"integer"
-						]
+						"type": ["string", "integer"]
 					},
 					"attachedSpells": {
 						"type": "array",
@@ -296,12 +266,8 @@
 					"reqAttuneAltTags": {
 						"$ref": "util.json#/definitions/reqAttuneTags"
 					},
-					"hasFluff": {
-						"type": "boolean"
-					},
-					"hasFluffImages": {
-						"type": "boolean"
-					}
+					"hasFluff": {"type": "boolean"},
+					"hasFluffImages": {"type": "boolean"}
 				},
 				"required": [
 					"name",

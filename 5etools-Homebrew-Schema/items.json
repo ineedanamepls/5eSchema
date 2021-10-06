@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "items.json",
-	"version": "1.10.5",
+	"version": "1.10.7",
 	"type": "object",
 	"definitions": {
 		"itemData": {
@@ -11,6 +11,9 @@
 					"type": "string"
 				},
 				"type": {
+					"type": "string"
+				},
+				"typeAlt": {
 					"type": "string"
 				},
 				"rarity": {
@@ -88,27 +91,9 @@
 						"anyOf": [
 							{
 								"type": "string",
-								"enum": [
-									"2H",
-									"A",
-									"AF",
-									"BF",
-									"EM",
-									"F",
-									"H",
-									"L",
-									"LD",
-									"OTH",
-									"R",
-									"RLD",
-									"S",
-									"T",
-									"V"
-								]
+								"enum": ["2H", "A", "AF", "BF", "EM", "F", "H", "L", "LD", "OTH", "R", "RLD", "S", "T", "V"]
 							},
-							{
-								"type": "string"
-							}
+							{"type": "string"}
 						]
 					}
 				},
@@ -167,17 +152,11 @@
 					"type": "boolean"
 				},
 				"strength": {
-					"type": [
-						"string",
-						"null"
-					]
+					"type": ["string", "null"]
 				},
 				"dexterityMax": {
 					"description": "Maximum dexterity modifier for medium armor.",
-					"type": [
-						"integer",
-						"null"
-					]
+					"type": ["integer", "null"]
 				},
 				"sword": {
 					"type": "boolean"
@@ -192,17 +171,11 @@
 				"tier": {
 					"type": "string",
 					"description": "Item Tier as per XGE p135",
-					"enum": [
-						"minor",
-						"major"
-					]
+					"enum": ["minor", "major"]
 				},
 				"value": {
 					"description": "In copper pieces.",
-					"type": [
-						"number",
-						"null"
-					]
+					"type": ["number", "null"]
 				},
 				"currencyConversion": {
 					"description": "ID of a value conversion table. Homebrew only.",
@@ -242,12 +215,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"contact",
-							"ingested",
-							"injury",
-							"inhaled"
-						]
+						"enum": ["contact", "ingested", "injury", "inhaled"]
 					}
 				},
 				"crew": {
@@ -288,21 +256,10 @@
 					"type": "integer"
 				},
 				"charges": {
-					"type": [
-						"string",
-						"integer"
-					]
+					"type": ["string", "integer"]
 				},
 				"recharge": {
-					"enum": [
-						"dawn",
-						"dusk",
-						"midnight",
-						"round",
-						"restShort",
-						"restLong",
-						"special"
-					]
+					"enum": ["round", "restShort", "restLong", "dawn", "dusk", "midnight", "special"]
 				},
 				"attachedSpells": {
 					"type": "array",
@@ -327,19 +284,19 @@
 						"static": {
 							"type": "object"
 						},
-						"str": {
+						"str":  {
 							"type": "integer"
 						},
 						"dex": {
 							"type": "integer"
 						},
-						"con": {
+						"con":  {
 							"type": "integer"
 						},
 						"int": {
 							"type": "integer"
 						},
-						"wis": {
+						"wis":  {
 							"type": "integer"
 						},
 						"cha": {
@@ -357,16 +314,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"Bard",
-									"Cleric",
-									"Druid",
-									"Paladin",
-									"Ranger",
-									"Sorcerer",
-									"Warlock",
-									"Wizard"
-								]
+								"enum": ["Artificer", "Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"]
 							}
 						}
 					]
@@ -411,6 +359,9 @@
 				"bonusProficiencyBonus": {
 					"type": "string"
 				},
+				"modifySpeed": {
+					"$ref": "util.json#/definitions/itemModifySpeed"
+				},
 				"otherSources": {
 					"$ref": "util.json#/definitions/otherSources"
 				},
@@ -435,9 +386,7 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": [
-									"special"
-								]
+								"required": ["special"]
 							},
 							{
 								"type": "object",
@@ -450,10 +399,7 @@
 									}
 								},
 								"additionalProperties": false,
-								"required": [
-									"item",
-									"quantity"
-								]
+								"required": ["item", "quantity"]
 							}
 						]
 					}
@@ -502,17 +448,12 @@
 				"reqAttuneAltTags": {
 					"$ref": "util.json#/definitions/reqAttuneTags"
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				},
-				"hasRefs": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"},
+				"hasRefs": {"type": "boolean"}
 			}
 		},
+
 		"item": {
 			"anyOf": [
 				{

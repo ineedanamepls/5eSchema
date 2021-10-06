@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "books.json",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -18,6 +18,11 @@
 					},
 					"source": {
 						"type": "string"
+					},
+					"group": {
+						"description": "The group under which this book should be listed in the navbar.",
+						"type": "string",
+						"enum": ["core", "supplement", "homebrew", "screen", "other"]
 					},
 					"author": {
 						"type": "string"
@@ -72,19 +77,10 @@
 									"properties": {
 										"type": {
 											"type": "string",
-											"enum": [
-												"chapter",
-												"appendix",
-												"part",
-												"episode",
-												"level"
-											]
+											"enum": ["chapter", "appendix", "part", "episode", "level"]
 										},
 										"identifier": {
-											"type": [
-												"integer",
-												"string"
-											]
+											"type": ["integer", "string"]
 										}
 									},
 									"additionalProperties": false,
@@ -112,3 +108,12 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+
+

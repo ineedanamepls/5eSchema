@@ -3,34 +3,25 @@
 	"$id": "vehicles.json",
 	"version": "1.4.0",
 	"type": "object",
+
 	"definitions": {
 		"vehicleTerrain": {
 			"type": "array",
 			"items": {
 				"type": "string",
-				"enum": [
-					"land",
-					"sea",
-					"air"
-				]
+				"enum": ["land", "sea", "air"]
 			}
 		},
+
 		"vehicle": {
 			"oneOf": [
-				{
-					"$ref": "#/definitions/vehicleShip"
-				},
-				{
-					"$ref": "#/definitions/vehicleInfernalWarMachine"
-				},
-				{
-					"$ref": "#/definitions/vehicleCreature"
-				},
-				{
-					"$ref": "#/definitions/vehicleObject"
-				}
+				{"$ref": "#/definitions/vehicleShip"},
+				{"$ref": "#/definitions/vehicleInfernalWarMachine"},
+				{"$ref": "#/definitions/vehicleCreature"},
+				{"$ref": "#/definitions/vehicleObject"}
 			]
 		},
+
 		"vehicleUpgrade": {
 			"type": "object",
 			"properties": {
@@ -51,16 +42,10 @@
 				},
 				"upgradeType": {
 					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"items": {"type": "string"}
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
 			"required": [
 				"name",
@@ -70,6 +55,7 @@
 			],
 			"additionalProperties": false
 		},
+
 		"vehicleShip": {
 			"type": "object",
 			"properties": {
@@ -82,12 +68,8 @@
 				"page": {
 					"type": "integer"
 				},
-				"vehicleType": {
-					"const": "SHIP"
-				},
-				"terrain": {
-					"$ref": "#/definitions/vehicleTerrain"
-				},
+				"vehicleType": {"const": "SHIP"},
+				"terrain": {"$ref": "#/definitions/vehicleTerrain"},
 				"size": {
 					"type": "string",
 					"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
@@ -117,10 +99,7 @@
 					"type": "integer"
 				},
 				"capCargo": {
-					"type": [
-						"number",
-						"string"
-					]
+					"type": ["number", "string"]
 				},
 				"pace": {
 					"type": "integer"
@@ -185,10 +164,7 @@
 							"type": "integer"
 						}
 					},
-					"required": [
-						"ac",
-						"hp"
-					],
+					"required": ["ac", "hp"],
 					"additionalProperties": false
 				},
 				"control": {
@@ -215,11 +191,7 @@
 								}
 							}
 						},
-						"required": [
-							"ac",
-							"hp",
-							"entries"
-						],
+						"required": ["ac", "hp", "entries"],
 						"additionalProperties": false
 					}
 				},
@@ -262,10 +234,7 @@
 											}
 										}
 									},
-									"required": [
-										"mode",
-										"entries"
-									],
+									"required": ["mode", "entries"],
 									"additionalProperties": false
 								}
 							},
@@ -284,18 +253,12 @@
 											}
 										}
 									},
-									"required": [
-										"mode",
-										"entries"
-									],
+									"required": ["mode", "entries"],
 									"additionalProperties": false
 								}
 							}
 						},
-						"required": [
-							"ac",
-							"hp"
-						],
+						"required": ["ac", "hp"],
 						"additionalProperties": false
 					}
 				},
@@ -326,10 +289,7 @@
 								}
 							}
 						},
-						"required": [
-							"name",
-							"entries"
-						],
+						"required": ["name", "entries"],
 						"additionalProperties": false
 					}
 				},
@@ -348,9 +308,7 @@
 								}
 							}
 						},
-						"required": [
-							"entries"
-						],
+						"required": ["entries"],
 						"additionalProperties": false
 					}
 				},
@@ -404,19 +362,13 @@
 				"hasToken": {
 					"type": "boolean"
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": [
-				"name",
-				"source"
-			],
+			"required": ["name", "source"],
 			"additionalProperties": false
 		},
+
 		"vehicleInfernalWarMachine": {
 			"type": "object",
 			"properties": {
@@ -429,12 +381,8 @@
 				"page": {
 					"type": "integer"
 				},
-				"vehicleType": {
-					"const": "INFWAR"
-				},
-				"terrain": {
-					"$ref": "#/definitions/vehicleTerrain"
-				},
+				"vehicleType": {"const": "INFWAR"},
+				"terrain": {"$ref": "#/definitions/vehicleTerrain"},
 				"size": {
 					"type": "string",
 					"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
@@ -498,11 +446,7 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": [
-						"hp",
-						"dt",
-						"mt"
-					]
+					"required": ["hp", "dt", "mt"]
 				},
 				"conditionImmune": {
 					"type": "array",
@@ -570,42 +514,30 @@
 				"hasToken": {
 					"type": "boolean"
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": [
-				"name",
-				"source"
-			],
+			"required": ["name", "source"],
 			"additionalProperties": false
 		},
+
 		"vehicleCreature": {
 			"type": "object",
 			"properties": {
-				"vehicleType": {
-					"const": "CREATURE"
-				},
-				"terrain": {
-					"$ref": "#/definitions/vehicleTerrain"
-				}
+				"vehicleType": {"const": "CREATURE"},
+				"terrain": {"$ref": "#/definitions/vehicleTerrain"}
 			}
 		},
+
 		"vehicleObject": {
 			"type": "object",
 			"properties": {
-				"vehicleType": {
-					"const": "OBJECT"
-				},
-				"terrain": {
-					"$ref": "#/definitions/vehicleTerrain"
-				}
+				"vehicleType": {"const": "OBJECT"},
+				"terrain": {"$ref": "#/definitions/vehicleTerrain"}
 			}
 		}
 	},
+
 	"properties": {
 		"vehicle": {
 			"type": "array",
