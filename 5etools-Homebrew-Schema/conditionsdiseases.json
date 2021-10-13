@@ -67,6 +67,7 @@
 	},
 	"required": [
 		"condition",
-		"disease"
+		"disease",
+		"status"
 	]
 }

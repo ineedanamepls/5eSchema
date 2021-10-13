@@ -378,6 +378,9 @@
 		"disease": {
 			"$ref": "conditionsdiseases.json#/properties/disease"
 		},
+		"status": {
+			"$ref": "conditionsdiseases.json#/properties/status"
+		},
 		"deity": {
 			"$ref": "deities.json#/properties/deity"
 		},
@@ -395,6 +398,9 @@
 		},
 		"race": {
 			"$ref": "races.json#/properties/race"
+		},
+		"raceFluff": {
+			"$ref": "fluff-races.json#/properties/raceFluff"
 		},
 		"reward": {
 			"$ref": "rewards.json#/properties/reward"

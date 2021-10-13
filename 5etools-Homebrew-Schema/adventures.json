@@ -26,7 +26,7 @@
 					"alLength": {
 						"description": "Adventurers League length (in hours); for use in homebrew.",
 						"type": "object",
-						"oneOf": [
+						"anyOf": [
 							{
 								"properties": {
 									"min": {"type": "integer"},
@@ -150,7 +150,7 @@
 						"type": "string"
 					},
 					"storyline": {
-						"oneOf": [
+						"anyOf": [
 							{
 								"type": "string",
 								"enum": [

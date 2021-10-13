@@ -3,6 +3,7 @@
 	"$id": "bookData.json",
 	"version": "1.0.0",
 	"type": "object",
+
 	"definitions": {
 		"bookData": {
 			"type": "object",
@@ -20,6 +21,7 @@
 			"additionalProperties": false
 		}
 	},
+
 	"properties": {
 		"bookData": {
 			"type": "array",

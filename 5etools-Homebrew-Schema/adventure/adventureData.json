@@ -3,6 +3,7 @@
 	"$id": "adventureData.json",
 	"version": "1.0.0",
 	"type": "object",
+
 	"definitions": {
 		"adventureData": {
 			"type": "object",
