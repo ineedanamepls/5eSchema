@@ -16,19 +16,19 @@
 				"lairActions": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				},
 				"regionalEffects": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				},
 				"mythicEncounter": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				}
 			}
@@ -55,7 +55,7 @@
 						"$ref": "#/definitions/legendaryGroupData"
 						},
 						{
-						"$ref": "util.json#/definitions/copyBlock"
+						"$ref": "../util.json#/definitions/copyBlock"
 						}
 					]
 				}
@@ -64,7 +64,7 @@
 	},
 
 	"properties": {
-		"_meta": {"$ref": "util.json#/definitions/metaBlock"},
+		"_meta": {"$ref": "../util.json#/definitions/metaBlock"},
 		"legendaryGroup": {
 			"type": "array",
 			"uniqueItems": true,

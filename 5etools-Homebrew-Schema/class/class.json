@@ -45,7 +45,7 @@
 							"items": {
 								"type": "array",
 								"items": {
-									"$ref": "entry.json"
+									"$ref": "../entry.json"
 								}
 							}
 						}
@@ -106,12 +106,12 @@
 				"entries": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				},
 				"isClassFeatureVariant": {"type": "boolean"},
 				"otherSources": {
-					"$ref": "util.json#/definitions/otherSources"
+					"$ref": "../util.json#/definitions/otherSources"
 				}
 			},
 			"required": [
@@ -141,7 +141,7 @@
 				"entries": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				},
 				"isClassFeatureVariant": {"type": "boolean"},
@@ -150,7 +150,7 @@
 					"type": "boolean"
 				},
 				"otherSources": {
-					"$ref": "util.json#/definitions/otherSources"
+					"$ref": "../util.json#/definitions/otherSources"
 				}
 			},
 			"required": [
@@ -224,7 +224,7 @@
 					}
 				},
 				"skills": {
-					"$ref": "util.json#/definitions/skillProficiencies"
+					"$ref": "../util.json#/definitions/skillProficiencies"
 				}
 			}
 		},
@@ -254,7 +254,7 @@
 							"$ref": "#/definitions/subclassData"
 						},
 						{
-							"$ref": "util.json#/definitions/copyBlock"
+							"$ref": "../util.json#/definitions/copyBlock"
 						}
 					]
 				}
@@ -340,9 +340,9 @@
 					"items": { "$ref": "#/definitions/classTableGroup"}
 				},
 				"otherSources": {
-					"$ref": "util.json#/definitions/otherSources"
+					"$ref": "../util.json#/definitions/otherSources"
 				},
-				"additionalSpells": { "$ref": "util.json#/definitions/additionalSpellsArray" },
+				"additionalSpells": { "$ref": "../util.json#/definitions/additionalSpellsArray" },
 				"subclassSpells": {
 					"description": "Homebrew use only",
 					"type": "array",
@@ -408,7 +408,7 @@
 				"entries": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
+						"$ref": "../entry.json"
 					}
 				}
 			},
@@ -437,7 +437,7 @@
 							"$ref": "#/definitions/classData"
 						},
 						{
-							"$ref": "util.json#/definitions/copyBlock"
+							"$ref": "../util.json#/definitions/copyBlock"
 						}
 					]
 				}
@@ -456,7 +456,7 @@
 					"type": "string"
 				},
 				"otherSources": {
-					"$ref": "util.json#/definitions/otherSources"
+					"$ref": "../util.json#/definitions/otherSources"
 				},
 				"srd": {
 					"type": "boolean"
@@ -510,7 +510,7 @@
 							}
 						},
 						"defaultData": {
-							"$ref": "util.json#/definitions/startingEquipment"
+							"$ref": "../util.json#/definitions/startingEquipment"
 						},
 						"goldAlternative": {
 							"type": "string"
@@ -532,7 +532,7 @@
 						},
 						"entries": {
 							"type": "array",
-							"items": {"$ref": "entry.json"}
+							"items": {"$ref": "../entry.json"}
 						}
 					},
 					"additionalProperties": false
@@ -602,7 +602,7 @@
 							"name": {"type": "string"},
 							"featureType": {
 								"type": "array",
-								"items": {"$ref": "util.json#/definitions/dataOptionalfeatureType"}
+								"items": {"$ref": "../util.json#/definitions/dataOptionalfeatureType"}
 							},
 							"progression": {
 								"type": "array",
@@ -653,7 +653,7 @@
 							},
 							"entries": {
 								"type": "array",
-								"items": {"$ref": "entry.json"}
+								"items": {"$ref": "../entry.json"}
 							},
 							"page": {
 								"type": "integer"
@@ -669,7 +669,7 @@
 						"additionalProperties": false
 					}
 				},
-				"additionalSpells": { "$ref": "util.json#/definitions/additionalSpellsArray" },
+				"additionalSpells": { "$ref": "../util.json#/definitions/additionalSpellsArray" },
 				"classSpells": {
 					"description": "Homebrew use only",
 					"type": "array",
@@ -723,7 +723,7 @@
 
 	"properties": {
 		"_meta": {
-			"$ref": "util.json#/definitions/metaBlock"
+			"$ref": "../util.json#/definitions/metaBlock"
 		},
 
 		"class": {

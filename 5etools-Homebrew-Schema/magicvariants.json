@@ -80,10 +80,11 @@
 							},
 							"rarity": {
 								"type": "string",
-								"description": "\"None\" is for mundane items. \"Unknown\" is for miscellaneous mundane items. \"Unknown (Magic)\" is for miscellaneous magical items. \"Varies\" is for item groups.",
+								"description": "\"None\" is for mundane items.\n\"Unknown\" is for miscellaneous mundane items. \n\"Unknown (Magic)\" is for miscellaneous magical items. \n\"Varies\" is for itemgroups.",
 								"enum": [
 									"none",
 									"unknown",
+
 									"common",
 									"uncommon",
 									"rare",
@@ -91,6 +92,7 @@
 									"legendary",
 									"artifact",
 									"unknown (magic)",
+
 									"varies"
 								]
 							},

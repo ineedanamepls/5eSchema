@@ -18,10 +18,11 @@
 				},
 				"rarity": {
 					"type": "string",
-					"description": "\"None\" is for mundane items. \"Unknown\" is for miscellaneous mundane items.  \"Unknown (Magic)\" is for miscellaneous magical items. \"Varies\" is for item groups.",
+					"description": "\"None\" is for mundane items. \n\"Unknown\" is for miscellaneous mundane items.  \n\"Unknown (Magic)\" is for miscellaneous magical items. \n\"Varies\" is for item groups.",
 					"enum": [
 						"none",
 						"unknown",
+
 						"common",
 						"uncommon",
 						"rare",
@@ -29,6 +30,7 @@
 						"legendary",
 						"artifact",
 						"unknown (magic)",
+						
 						"varies"
 					]
 				},
@@ -453,6 +455,11 @@
 				},
 				"reqAttuneAltTags": {
 					"$ref": "util.json#/definitions/reqAttuneTags"
+				},
+				"foundryType":{
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\"",
+					"type": "string",
+					"enum": ["weapon", "equipment", "consumable", "tool", "loot", "class", "spell", "feat", "backpack"]
 				},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"},

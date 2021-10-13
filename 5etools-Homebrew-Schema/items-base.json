@@ -57,10 +57,11 @@
 					},
 					"rarity": {
 						"type": "string",
-						"description": "\"None\" is for mundane items. \"Unknown\" is for miscellaneous mundane items. \"Unknown (Magic)\" is for miscellaneous magical items.",
+						"description": "\"None\" is for mundane items. \n\"Unknown\" is for miscellaneous mundane items. \n\"Unknown (Magic)\" is for miscellaneous magical items.",
 						"enum": [
 							"none",
 							"unknown",
+							
 							"common",
 							"uncommon",
 							"rare",

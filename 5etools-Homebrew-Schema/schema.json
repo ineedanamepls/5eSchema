@@ -1,8 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"version": "1.6.0",
+	"version": "1.7.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
+
 	"properties": {
 		"_meta": {
 			"description": "Metadata for the included data arrays",
@@ -24,7 +25,8 @@
 							},
 							"color": {
 								"type": "string",
-								"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'"
+								"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
+								"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
 							},
 							"full": {
 								"type": "string",
@@ -89,7 +91,10 @@
 					"description": "Object keys are Sense names, which can referenced using {@sense <key>} (case insensitive)",
 					"patternProperties": {
 						".*": {
-							"type": "string"
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						}
 					}
 				},
@@ -108,7 +113,8 @@
 								},
 								"color": {
 									"type": "string",
-									"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'"
+									"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
+									"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
 								}
 							},
 							"required": [
@@ -277,20 +283,20 @@
 			"$ref": "books.json#/properties/book"
 		},
 		"class": {
-			"$ref": "class.json#/properties/class"
+			"$ref": "class/class.json#/properties/class"
 		},
 		"subclass": {
-			"$ref": "class.json#/properties/subclass"
+			"$ref": "class/class.json#/properties/subclass"
 		},
 		"subclassFeature": {
-			"$ref": "class.json#/properties/subclassFeature"
+			"$ref": "class/class.json#/properties/subclassFeature"
 		},
 		"spell": {
-			"$ref": "spells.json#/properties/spell"
+			"$ref": "spells/spells.json#/properties/spell"
 		},
 		"roll20Spell": {
-			"description": "Based on the Roll20 JSON data",
-			"type": "array"
+			"description": "Based on the Roll20 JSON data, example available here: https://app.roll20.net/compendium/dnd5e/Spells:Fireball.json",
+			"$ref": "spells/roll20.json#/properties/spell"
 		},
 		"foundrySpell": {
 			"type": "array",
@@ -412,25 +418,25 @@
 			"$ref": "variantrules.json#/properties/variantrule"
 		},
 		"legendaryGroup": {
-			"$ref": "legendarygroups.json#/properties/legendaryGroup"
+			"$ref": "bestiary/legendarygroups.json#/properties/legendaryGroup"
 		},
 		"language": {
 			"$ref": "languages.json#/properties/language"
 		},
 		"monster": {
-			"$ref": "bestiary.json#/properties/monster"
+			"$ref": "bestiary/bestiary.json#/properties/monster"
 		},
 		"itemFluff": {
 			"$ref": "fluff-items.json#/properties/itemFluff"
 		},
 		"monsterFluff": {
-			"$ref": "fluff-bestiary.json#/properties/monsterFluff"
+			"$ref": "bestiary/fluff-bestiary.json#/properties/monsterFluff"
 		},
 		"bookData": {
-			"$ref": "bookData.json#/properties/bookData"
+			"$ref": "book/bookData.json#/properties/bookData"
 		},
 		"adventureData": {
-			"$ref": "adventureData.json#/properties/adventureData"
+			"$ref": "adventure/adventureData.json#/properties/adventureData"
 		},
 		"$schema": {
 			"type": "string"
@@ -445,7 +451,7 @@
 			"$ref": "recipes.json#/properties/recipe"
 		},
 		"classFeature": {
-			"$ref": "class.json#/properties/classFeature"
+			"$ref": "class/class.json#/properties/classFeature"
 		},
 		"cult": {
 			"$ref": "cultsboons.json#/properties/cult"
@@ -455,6 +461,12 @@
 		},
 		"charoption": {
 			"$ref": "charcreationoptions.json#/properties/charoption"
+		},
+		"foundryClassFeature": {
+			"$ref": "class/foundry.json#/properties/classFeature"
+		},
+		"foundrySubclassFeature": {
+			"$ref": "class/foundry.json#/properties/subclassFeature"
 		}
 	},
 	"additionalProperties": false

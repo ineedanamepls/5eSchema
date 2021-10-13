@@ -27,7 +27,8 @@
 				},
 				"color": {
 					"description": "For homebrew use only.",
-					"type": "string"
+					"type": "string",
+					"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
 				},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
